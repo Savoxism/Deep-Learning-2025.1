@@ -122,15 +122,20 @@ def main():
     
     logger.info(f"START INDEXING: {args.input}")
 
+    DB_DIR = "vector_db"
+    if not os.path.exists(DB_DIR):
+        os.makedirs(DB_DIR)
+
     # load Data
     if not os.path.exists(args.input):
         logger.error(f"File missing: {args.input}")
         return
     df = pd.read_csv(args.input)
     
+    DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
     # initialuze
     chunker = SimpleChunker(chunk_size=256, overlap=32)
-    embedding_model = EmbeddingModel(model_name=args.model_name)
+    embedding_model = EmbeddingModel(model_name=args.model_name, device = DEVICE)
     milvus_client = MilvusClient(args.output)
 
     # chunking
