@@ -19,7 +19,7 @@ if __name__ == "__main__":
     hits, mrrs = [], []
     k = 5
     
-    INPUT_FILE = "results.json"
+    INPUT_FILE = "outputs.json"
 
     print(f"📊 Loading data from {INPUT_FILE}...")
     

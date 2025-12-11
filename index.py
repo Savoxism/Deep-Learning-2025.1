@@ -23,19 +23,14 @@ python index.py \
 
 logger = setup_logger(log_file="indexing.log")
 
-def embed_batch(texts: List[str],
-                embedding_model: EmbeddingModel,
-                batch_size: int = 32) -> List:
+def embed_batch(texts: List[str], embedding_model: EmbeddingModel, batch_size: int = 32) -> List:
     """
     Create embeddings for a batch of texts.
-    Tự động detect dimension để xử lý fallback.
     """
-    print("🚀 Đang dùng hàm embed_batch tối ưu...")
     all_embeddings = []
-    PROCESSING_BATCH = 2048 # Xử lý từng cụm lớn trên CPU
+    PROCESSING_BATCH = 2048 
 
     # Lấy dimension mẫu từ model để phòng hờ trường hợp lỗi cần padding zero
-    # Encode thử 1 câu giả
     dummy_emb = embedding_model.encode(["test"], batch_size=1)
     EMBEDDING_DIM = dummy_emb.shape[1]
     logger.info(f"Detected Model Dimension: {EMBEDDING_DIM}")
@@ -45,13 +40,12 @@ def embed_batch(texts: List[str],
 
         try:
             # Gọi model encode
-            # Class EmbeddingModel mới trả về Numpy Array -> Rất tốt
             batch_emb = embedding_model.encode(
                 batch_texts, 
                 batch_size=batch_size 
             )
             
-            # Kiểm tra số lượng
+            # check for batch size mismatch
             if len(batch_emb) != len(batch_texts):
                 logger.warning(f"⚠️ Batch mismatch at index {i}! Input: {len(batch_texts)}, Output: {len(batch_emb)}")
                 missing_count = len(batch_texts) - len(batch_emb)
@@ -81,12 +75,12 @@ def indexing(chunks: List[Dict], embeddings: List, milvus_client: MilvusClient, 
     logger.info("="*40)
     logger.info(f"SAVING TO MILVUS: {collection_name}")
 
-    # 1. Drop existing
+    # drop existing 
     if milvus_client.has_collection(collection_name):
         logger.warning(f"Collection '{collection_name}' exists. Dropping...")
         milvus_client.drop_collection(collection_name)
     
-    # 2. Validate Embeddings
+    # validate Embeddings
     if not embeddings:
         logger.error("No embeddings to save!")
         return
@@ -137,8 +131,8 @@ def indexing(chunks: List[Dict], embeddings: List, milvus_client: MilvusClient, 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", default="data/filtered_corpus.csv", help="CSV file")
-    parser.add_argument("--output", default="vector_db/legal_race.db", help="Milvus DB Path")
-    parser.add_argument("--collection", default="legal_chunks_e5", help="Collection Name")
+    parser.add_argument("--output", default="vector_db/default.db", help="Milvus DB Path")
+    parser.add_argument("--collection", default="deep_learning_proj", help="Collection Name")
     # Default model name updated
     parser.add_argument("--model-name", default="AITeamVN/Vietnamese_Embedding")
     parser.add_argument("--batch-size", type=int, default=32, help="GPU Inference Batch Size")

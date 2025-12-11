@@ -1,7 +1,6 @@
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from typing import List, Tuple, Union
-import numpy as np
 
 class RerankingModel:
     def __init__(self, model_name: str = 'BAAI/bge-reranker-base', device = None):
@@ -44,9 +43,7 @@ class RerankingModel:
         else:
             scores = logits[:, 1]
 
-        # Use Sigmoid to normalize to [0, 1] (Standard for BGE)
-        scores = torch.sigmoid(scores)
-        
+        scores = torch.sigmoid(scores)        
         return scores.cpu().tolist()
 
 if __name__ == "__main__":
