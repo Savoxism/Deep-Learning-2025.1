@@ -9,18 +9,18 @@ from utils.models.embedder import EmbeddingModel
 from utils.models.reranker import RerankingModel
 
 # --- CONFIG ---
-DB_PATH = "vector_db/viettel_law.db" 
+DB_PATH = "vector_db/viettel_law_finetuned.db" 
 COLLECTION_NAME = "chunks_aiteamvn" 
 INPUT_CSV = "data/processed_train.csv"
 OUTPUT_FILE = "outputs.json" 
 RETRIEVAL_TOP_K = 15  
 RERANK_TOP_M = 5      
-EMBEDDING_MODEL_NAME = "AITeamVN/Vietnamese_Embedding"
+EMBEDDING_MODEL_NAME = "Savoxism/vietnamese-legal-embedding-finetuned"
 RERANKING_MODEL_NAME = "BAAI/bge-reranker-base"
 
 
 df = pd.read_csv(INPUT_CSV)
-df_subset = df.head(500) # Process first 500 queries
+df_subset = df.head(500) # process some queries
 
 client = MilvusClient(uri=DB_PATH)
 print("using embedder model:", EMBEDDING_MODEL_NAME)
@@ -28,21 +28,19 @@ embedder = EmbeddingModel(model_name=EMBEDDING_MODEL_NAME)
 reranker = RerankingModel(model_name=RERANKING_MODEL_NAME)
 
 results_to_save = []
-# Processing Loop
+# main processing loop
 for idx, row in tqdm(df_subset.iterrows(), total=len(df_subset)):
-    question = str(row['question']) # Ensure string
+    question = str(row['question'])
     
-    # --- A. Parse Ground Truth CIDs ---
+    # Parse ground truth cids
     gt_cids = []
     try:
         raw_cid = row.get('cid_list', row.get('cid'))
         if isinstance(raw_cid, str):
             raw_cid = raw_cid.strip()
-            # Thử parse list chuẩn [1, 2]
             if raw_cid.startswith('[') and raw_cid.endswith(']'):
                 gt_cids = ast.literal_eval(raw_cid)
             else:
-                # Fallback: dùng regex bắt số nếu format lạ
                 gt_cids = re.findall(r'\d+', raw_cid)
         elif isinstance(raw_cid, (list, tuple, int, float)):
             if isinstance(raw_cid, (int, float)):
@@ -50,7 +48,6 @@ for idx, row in tqdm(df_subset.iterrows(), total=len(df_subset)):
             else:
                 gt_cids = raw_cid
         
-        # Normalize to list of strings
         gt_cids = [str(c) for c in gt_cids]
     except Exception:
         gt_cids = []
