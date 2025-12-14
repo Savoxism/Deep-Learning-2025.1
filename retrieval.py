@@ -9,18 +9,18 @@ from utils.models.embedder import EmbeddingModel
 from utils.models.reranker import RerankingModel
 
 # --- CONFIG ---
-DB_PATH = "vector_db/viettel_law_finetuned.db" 
-COLLECTION_NAME = "chunks_aiteamvn" 
+DB_PATH = "vector_db/VN_legal.db" 
+COLLECTION_NAME = "default" 
 INPUT_CSV = "data/processed_train.csv"
 OUTPUT_FILE = "outputs.json" 
 RETRIEVAL_TOP_K = 15  
 RERANK_TOP_M = 5      
-EMBEDDING_MODEL_NAME = "Savoxism/vietnamese-legal-embedding-finetuned"
+EMBEDDING_MODEL_NAME = "intfloat/multilingual-e5-base"
 RERANKING_MODEL_NAME = "BAAI/bge-reranker-base"
 
 
 df = pd.read_csv(INPUT_CSV)
-df_subset = df.head(500) # process some queries
+df_subset = df.head(100) # process some queries
 
 client = MilvusClient(uri=DB_PATH)
 print("using embedder model:", EMBEDDING_MODEL_NAME)

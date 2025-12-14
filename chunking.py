@@ -1,7 +1,7 @@
 from typing import List, Dict
 
 class SimpleChunker:
-    def __init__(self, chunk_size: int = 256, overlap: int = 32):
+    def __init__(self, chunk_size: int = 384, overlap: int = 48):
         self.chunk_size = chunk_size
         self.overlap = overlap
         self.step = chunk_size - overlap
@@ -13,10 +13,10 @@ class SimpleChunker:
         if not isinstance(text, str) or not text:
             return []
 
-        # Tách văn bản thành list các từ (dựa trên khoảng trắng)
+        # split by whitespace
         words = text.split()
         
-        # Nếu văn bản ngắn hơn chunk_size, trả về nguyên văn
+        # If text is shorter than chunk_size, return as a single chunk
         if len(words) <= self.chunk_size:
             return [{
                 'cid': cid,
@@ -28,17 +28,13 @@ class SimpleChunker:
         chunks = []
         chunk_idx = 0
         
-        # Vòng lặp Sliding Window
-        # range(start, stop, step)
+        # sliding Window
         for i in range(0, len(words), self.step):
-            # Lấy slice từ i đến i + chunk_size
             chunk_words = words[i : i + self.chunk_size]
             
-            # Bỏ qua nếu chunk rỗng (trường hợp hiếm)
             if not chunk_words:
                 continue
 
-            # Ghép lại thành chuỗi
             chunk_str = " ".join(chunk_words)
             
             chunks.append({

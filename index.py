@@ -13,12 +13,7 @@ from chunking import SimpleChunker
 from utils.helper import setup_logger
 
 """
-python index.py \
-  --input "data/filtered_corpus.csv" \
-  --output "vector_db/viettel_law.db" \
-  --collection "chunks_aiteamvn" \
-  --model-name "AITeamVN/Vietnamese_Embedding" \
-  --batch-size 32
+python index.py --input "data/filtered_corpus.csv" --output "vector_db/VN_legal.db" --collection "default" --model-name "intfloat/multilingual-e5-base" --batch-size 64
 """
 
 logger = setup_logger(log_file="indexing.log")
@@ -28,7 +23,7 @@ def embed_batch(texts: List[str], embedding_model: EmbeddingModel, batch_size: i
     Create embeddings for a batch of texts.
     """
     all_embeddings = []
-    PROCESSING_BATCH = 2048 
+    PROCESSING_BATCH = 512
 
     # Lấy dimension mẫu từ model để phòng hờ trường hợp lỗi cần padding zero
     dummy_emb = embedding_model.encode(["test"], batch_size=1)
@@ -53,7 +48,6 @@ def embed_batch(texts: List[str], embedding_model: EmbeddingModel, batch_size: i
                 # Dynamic Dimension Zero Padding
                 zeros = [np.zeros(EMBEDDING_DIM) for _ in range(missing_count)]
                 
-                # Convert numpy to list để nối
                 current_emb_list = list(batch_emb)
                 batch_emb = current_emb_list + zeros
 
@@ -85,12 +79,12 @@ def indexing(chunks: List[Dict], embeddings: List, milvus_client: MilvusClient, 
         logger.error("No embeddings to save!")
         return
     
-    # Lấy dimension thực tế từ vector đầu tiên
+    # get dimension
     first_vec = embeddings[0]
     dim = len(first_vec)
     logger.info(f"Final Embedding dimension: {dim}")
     
-    # 3. Create Collection
+    # create Collection
     milvus_client.create_collection(
         collection_name=collection_name,
         dimension=dim,
@@ -156,8 +150,7 @@ def main():
     DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
     
     # Initialize Components
-    chunker = SimpleChunker(chunk_size=256, overlap=32)
-    # Lưu ý: Class EmbeddingModel mới của bạn cần hỗ trợ tham số này
+    chunker = SimpleChunker(chunk_size=384, overlap=48)
     embedding_model = EmbeddingModel(model_name=args.model_name, device=DEVICE)
     milvus_client = MilvusClient(uri=args.output) 
 
