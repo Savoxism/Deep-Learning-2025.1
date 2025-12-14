@@ -1,7 +1,7 @@
 from typing import List, Dict
 
 class SimpleChunker:
-    def __init__(self, chunk_size: int = 384, overlap: int = 48):
+    def __init__(self, chunk_size: int = 256, overlap: int = 32):
         self.chunk_size = chunk_size
         self.overlap = overlap
         self.step = chunk_size - overlap

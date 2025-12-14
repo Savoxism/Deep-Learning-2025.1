@@ -4,7 +4,7 @@ import numpy as np
 from typing import List, Union
 
 class EmbeddingModel:
-    def __init__(self, model_name="AITeamVN/Vietnamese_Embedding", max_seq_length=2048, device=None):
+    def __init__(self, model_name="intfloat/multilingual-e5-base", max_seq_length=512, device=None):
         """
         Wrapper fpr SentenceTransformer.
         """

@@ -142,19 +142,20 @@ def main():
         os.makedirs(DB_DIR)
 
     # Load Data
-    if not os.path.exists(args.input):
-        logger.error(f"File missing: {args.input}")
-        return
     df = pd.read_csv(args.input)
     
     DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
     
     # Initialize Components
-    chunker = SimpleChunker(chunk_size=384, overlap=48)
-    embedding_model = EmbeddingModel(model_name=args.model_name, device=DEVICE)
+    chunker = SimpleChunker(chunk_size=256, overlap=32)
+    embedding_model = EmbeddingModel(
+        model_name=args.model_name,
+        max_seq_length = 512,
+        device=DEVICE
+    )
     milvus_client = MilvusClient(uri=args.output) 
 
-    # 1. Chunking
+    # Chunking
     all_chunks = []
     logger.info("Starting Chunking...")
     for _, row in tqdm(df.iterrows(), total=len(df), desc="Chunking Docs"):

@@ -18,9 +18,8 @@ RERANK_TOP_M = 5
 EMBEDDING_MODEL_NAME = "intfloat/multilingual-e5-base"
 RERANKING_MODEL_NAME = "BAAI/bge-reranker-base"
 
-
 df = pd.read_csv(INPUT_CSV)
-df_subset = df.head(100) # process some queries
+df_subset = df.sample(n=30, random_state=42).reset_index(drop=True)
 
 client = MilvusClient(uri=DB_PATH)
 print("using embedder model:", EMBEDDING_MODEL_NAME)
@@ -28,7 +27,6 @@ embedder = EmbeddingModel(model_name=EMBEDDING_MODEL_NAME)
 reranker = RerankingModel(model_name=RERANKING_MODEL_NAME)
 
 results_to_save = []
-# main processing loop
 for idx, row in tqdm(df_subset.iterrows(), total=len(df_subset)):
     question = str(row['question'])
     
