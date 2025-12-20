@@ -3,6 +3,7 @@ import json
 import ast
 import re
 from tqdm import tqdm
+import random
 
 from pymilvus import MilvusClient
 from utils.models.embedder import EmbeddingModel
@@ -19,7 +20,8 @@ EMBEDDING_MODEL_NAME = "intfloat/multilingual-e5-base"
 RERANKING_MODEL_NAME = "BAAI/bge-reranker-base"
 
 df = pd.read_csv(INPUT_CSV)
-df_subset = df.sample(n=30, random_state=42).reset_index(drop=True)
+df_subset = df.sample(n=20).reset_index(drop=True)
+
 
 client = MilvusClient(uri=DB_PATH)
 print("using embedder model:", EMBEDDING_MODEL_NAME)

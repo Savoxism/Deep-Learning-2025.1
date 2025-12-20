@@ -1,0 +1,784 @@
+[
+    {
+        "qid": 130370,
+        "question": "Người bán trong mua bán hàng hóa quốc tế không thể yêu cầu người mua trả tiền, nhận hàng hay thực hiện các nghĩa vụ khác của người mua khi nào?",
+        "ground_truth_cids": [
+            "207493"
+        ],
+        "retrieved_top_k": [
+            {
+                "cid": "88496",
+                "rerank_score": 0.8994,
+                "vector_score": 0.8766,
+                "text_snippet": "Nghĩa vụ nhận hàng của người mua gồm: a. Thực hiện mọi hành vi mà người ta có quyền chờ đợi ở họ một cách hợp lý để cho phép người bán thực hiện việc giao hàng và. b. Tiếp nhận hàng hóa."
+            },
+            {
+                "cid": "88495",
+                "rerank_score": 0.8229,
+                "vector_score": 0.8818,
+                "text_snippet": "1. Nếu người mua không có nghĩa vụ phải trả tiền vào một thời hạn cụ thể nào nhất định, thì họ phải trả khi, chiếu theo hợp đồng và Công ước này, người bán đặt dưới quyền định đoạt của người mua, hoặc hàng hóa hoặc các chứng từ nhận hàng. Người bán có thể đặt điều kiện phải thanh toán như vậy để đổi lại việc họ giao hàng hoặc chứng từ. 2. Nếu hợp đồng quy định việc chuyên chở hàng hóa, người bán có thể gửi hàng đi với điều kiện là hàng hay chứng từ nhận hàng chỉ được giao cho người mua khi người mua thanh toán tiền hàng. 3. Người mua không có nghĩa vụ phải thanh toán tiền hàng trước khi họ có thể kiểm tra hàng hóa, trừ những trường hợp mà có thể thức giao hàng hay trả tiền do các bên thỏa thuận không cho phép làm việc đó."
+            },
+            {
+                "cid": "165562",
+                "rerank_score": 0.7815,
+                "vector_score": 0.8758,
+                "text_snippet": "1. Người mua có thể yêu cầu người bán phải thực hiện nghĩa vụ, trừ phi người mua sử dụng một biện pháp bảo hộ pháp lý không hợp với yêu cầu đó. 2. Nếu hàng hóa không phù hợp với hợp đồng thì người mua có thể đòi người bán phải giao hàng thay thế nếu sự không phù hợp đó tạo thành một sự vi phạm cơ bản hợp đồng và yêu cầu về việc thay thế hàng phải được đặt ra cùng một lúc với việc thông báo những dữ kiện chiếu theo điều 39 hoặc trong một thời hạn hợp lý sau đó. 3. Nếu hàng hóa không phù hợp với hợp đồng, người mua có quyền đòi người bán phải loại trừ sự không phù hợp ấy, trừ những trường hợp khi điều này không hợp lý xét theo tất cả các tình tiết. Việc yêu cầu loại trừ sự không phù hợp của hàng hóa so với hợp đồng phải được tiến hành hoặc là cùng một lúc với thông báo những dữ kiện chiếu theo điều 39 hoặc trong một thời hạn hợp lý sau đó."
+            },
+            {
+                "cid": "207493",
+                "rerank_score": 0.5382,
+                "vector_score": 0.8977,
+                "text_snippet": "Người bán có thể yêu cầu người mua trả tiền, nhận hàng hay thực hiện các nghĩa vụ khác của người mua, trừ phi họ sử dụng một biện pháp bảo hộ pháp lý khác không thích hợp với các yêu cầu đó."
+            },
+            {
+                "cid": "128105",
+                "rerank_score": 0.4574,
+                "vector_score": 0.8751,
+                "text_snippet": "Khi người mua chậm trễ nhận hàng hay không trả tiền, hoặc trong những trường hợp khi việc trả tiền và việc giao hàng phải được tiến hành cùng một lúc, nếu hàng hóa còn ở dưới quyền định đoạt hay kiểm soát của người bán thì người bán phải thực hiện những biện pháp hợp lý trong những tình huống như vậy để bảo quản hàng hóa. Người bán có quyền giữ lại hàng hóa cho tới khi nào người mua hoàn trả cho họ các chi phí hợp lý."
+            }
+        ]
+    },
+    {
+        "qid": 60936,
+        "question": "Trưởng thôn có phải là cán bộ cấp xã không?",
+        "ground_truth_cids": [
+            "31110"
+        ],
+        "retrieved_top_k": [
+            {
+                "cid": "122982",
+                "rerank_score": 0.4017,
+                "vector_score": 0.8675,
+                "text_snippet": "Tiêu chuẩn Trưởng thôn, Trưởng khu phố Trưởng thôn, Trưởng khu phố phải là người có hộ khẩu thường trú và cư trú thường xuyên ở thôn, khu phố; trình độ học vấn tốt nghiệp Trung học phổ thông trở lên; đủ 21 tuổi trở lên, có sức khỏe, nhiệt tình và có tinh thần trách nhiệm trong công tác; có phẩm chất chính trị và phẩm chất đạo đức tốt, được nhân dân tín nhiệm; bản thân và gia đình gương mẫu thực hiện đường lối, chủ trương của Đảng, chính sách, pháp luật của Nhà nước và các quy định của địa phương; có kiến thức văn hóa, năng lực, kinh nghiệm và phương pháp vận động, tổ chức nhân dân thực hiện tốt các công việc tự quản của cộng đồng dân cư và công việc cấp trên giao. Ở những nơi khó khăn, phức tạp về nhân sự ứng cử chức danh Trưởng thôn, Trưởng khu phố, Chủ tịch UBND cấp huyện xem xét, quyết định cụ thể tiêu chuẩn người ứng cử chức danh Trưởng thôn, Trưởng khu phố."
+            },
+            {
+                "cid": "92475",
+                "rerank_score": 0.3196,
+                "vector_score": 0.8504,
+                "text_snippet": "“Cán bộ xã, phường, thị trấn (sau đây gọi chung là cấp xã) là công dân Việt Nam, được bầu cử giữ chức vụ theo nhiệm kỳ trong Thường trực Hội đồng nhân dân, Ủy ban nhân dân, Bí thư, Phó Bí thư Đảng ủy, người đứng đầu tổ chức chính trị - xã hội; công chức cấp xã là công dân Việt Nam được tuyển dụng giữ một chức danh chuyên môn, nghiệp vụ thuộc Ủy ban nhân dân cấp xã, trong biên chế và hưởng lương từ ngân sách nhà nước.”"
+            },
+            {
+                "cid": "204616",
+                "rerank_score": 0.054,
+                "vector_score": 0.8546,
+                "text_snippet": "Việt Nam cấp xã quyết định cử Trưởng thôn, Tổ trưởng tổ dân phố lâm thời để điều hành hoạt động của thôn, tổ dân phố cho đến khi bầu được Trưởng thôn, Tổ trưởng tổ dân phố mới."
+            },
+            {
+                "cid": "46220",
+                "rerank_score": 0.0082,
+                "vector_score": 0.8469,
+                "text_snippet": "mưu, giúp Ủy ban nhân dân cấp xã kiểm tra, xử lý vi phạm, giải quyết khiếu nại, tố cáo, sơ kết, tổng kết, thi đua, khen thưởng về công tác quốc phòng địa phương theo quy định của pháp luật. 4. Thôn đội trưởng có nhiệm vụ tham mưu cho cấp ủy, chi bộ thôn lãnh đạo, chỉ đạo và tổ chức thực hiện nhiệm vụ quốc phòng, quân sự ở thôn; quản lý, chỉ huy trực tiếp dân quân thuộc quyền; phối hợp thực hiện chính sách hậu phương quân đội, chính sách ưu đãi người có công với cách mạng. 5. Chính phủ quy định số lượng Phó Chỉ huy trưởng; tiêu chuẩn, định mức trang thiết bị làm việc của Ban chỉ huy quân sự cấp xã.\""
+            },
+            {
+                "cid": "71239",
+                "rerank_score": 0.0023,
+                "vector_score": 0.8571,
+                "text_snippet": "hợp nộp hồ sơ tại cấp xã."
+            }
+        ]
+    },
+    {
+        "qid": 65927,
+        "question": "Ban Giám sát kỳ thi tuyển Kiểm sát viên cao cấp khi làm nhiệm vụ có phải đeo thẻ và phải tuân thủ đúng Quy chế thi không?",
+        "ground_truth_cids": [
+            "135293"
+        ],
+        "retrieved_top_k": [
+            {
+                "cid": "135293",
+                "rerank_score": 0.9996,
+                "vector_score": 0.8893,
+                "text_snippet": "Ban Giám sát kỳ thi ... 3. Nhiệm vụ, quyền hạn a) Giám sát việc thực hiện các quy định về tổ chức kỳ thi, hồ sơ, tiêu chuẩn và điều kiện của người dự thi; về thực hiện Quy chế thi, các Ban giúp việc của Hội đồng thi tuyển; b) Được vào phòng thi và nơi chấm thi trong thời gian thi và chấm thi; có quyền nhắc nhở người dự thi, Giám thị và các thành viên khác thực hiện đúng Quy chế thi. Khi phát hiện có sai phạm đến mức phải lập biên bản thì người giám sát kỳ thi có quyền lập biên bản về sai phạm của người dự thi, thành viên Ban Coi thi và Ban Chấm thi. c) Khi làm nhiệm vụ phải đeo thẻ và phải tuân thủ đúng Quy chế thi; nếu người giám sát vi phạm Quy chế thi làm ảnh hưởng đến kết quả của kỳ thi thì Trưởng ban Coi thi hoặc Trưởng ban Thư ký, Trưởng ban Phách, Trưởng ban Chấm thi báo cáo Chủ tịch Hội đồng thi tuyển trình Viện trưởng Viện kiểm sát nhân dân tối cao xử lý theo quy định của pháp luật."
+            },
+            {
+                "cid": "38847",
+                "rerank_score": 0.9974,
+                "vector_score": 0.8613,
+                "text_snippet": "Giám sát kỳ xét thăng hạng chức danh nghề nghiệp 1. Việc giám sát kỳ xét thăng hạng được thực hiện theo quyết định của Bộ trưởng Bộ Nông nghiệp và Phát triển nông thôn, Chủ tịch Ủy ban nhân dân tỉnh, thành phố trực thuộc Trung ương. 2. Nội dung giám sát, gồm: Việc thực hiện các quy định về tổ chức kỳ xét thăng hạng; về hồ sơ; tiêu chuẩn và điều kiện của viên chức đăng ký xét thăng hạng; về thực hiện Quy chế và nội dung tổ chức kỳ xét thăng hạng. 3. Địa điểm giám sát: Tại nơi làm việc của Hội đồng, nơi phỏng vấn hoặc thực hành. 4. Khi phát hiện có sai phạm đến mức phải lập biên bản thì giám sát viên có quyền lập biên bản về sai phạm của Ủy viên Hội đồng, thành viên Ban kiểm tra, sát hạch và viên chức dự xét thăng hạng. 5. Người được cử làm giám sát kỳ xét thăng hạng, khi làm nhiệm vụ phải đeo thẻ và tuân thủ quy chế kỳ xét thăng hạng chức danh nghề nghiệp."
+            },
+            {
+                "cid": "234325",
+                "rerank_score": 0.9504,
+                "vector_score": 0.8593,
+                "text_snippet": "vi phạm quy chế xét thăng hạng; mẫu biên bản bàn giao kết quả trước ngày tổ chức phỏng vấn hoặc thực hành; chuẩn bị thẻ cho các thành viên Hội đồng, Ban kiểm tra, sát hạch. ..."
+            },
+            {
+                "cid": "241539",
+                "rerank_score": 0.8942,
+                "vector_score": 0.8703,
+                "text_snippet": "Cấp thẻ kiểm định viên 1. Thẻ kiểm định viên được cấp cho người đạt yêu cầu tuyển chọn kiểm định viên theo quy định tại Điều 3 của Quy định này. 2. Thẻ kiểm định viên (Phụ lục III) có giá trị sử dụng 5 năm kể từ ngày cấp. 3. Trong thời hạn 15 ngày kể từ ngày ra quyết định tuyển chọn kiểm định viên, Cục trưởng Cục Khảo thí và Kiểm định chất lượng giáo dục cấp thẻ kiểm định viên cho người được tuyển chọn. 4. Thẻ kiểm định viên có giá trị pháp lý để đăng ký hành nghề kiểm định chất lượng giáo dục theo quy định tại Điều 13 của Quy định này. 5. Những người thuộc một trong những trường hợp được quy định tại khoản 4 Điều 5 của Quy định này thì không được cấp thẻ kiểm định viên."
+            },
+            {
+                "cid": "74002",
+                "rerank_score": 0.8144,
+                "vector_score": 0.8722,
+                "text_snippet": "Cấp thẻ kiểm định viên  1. Thẻ kiểm định viên được cấp cho người có trong quyết định công nhận kết quả thí sinh đạt yêu cầu trong kỳ sát hạch kiểm định viên theo quy định tại điểm a khoản 4 Điều 12 của Thông tư này.  2. Trong thời hạn 15 ngày làm việc kể từ ngày ra quyết định công nhận kết quả thí sinh đạt yêu cầu trong kỳ sát hạch kiểm định viên, Cục trưởng Cục Quản lý chất lượng cấp thẻ kiểm định viên theo mẫu tại Phụ lục VI kèm theo Thông tư này.  3. Danh sách người được cấp thẻ kiểm định viên được công khai trên Cổng thông tin điện tử của Bộ Giáo dục và Đào tạo, đồng thời cập nhật vào phần mềm quản lý hệ thống bảo đảm và kiểm định chất lượng giáo dục đại học."
+            }
+        ]
+    },
+    {
+        "qid": 117781,
+        "question": "Những cơ quan nào có trách nhiệm tham gia tổ chức phong trào thi đua trong Công an nhân dân?",
+        "ground_truth_cids": [
+            "193372"
+        ],
+        "retrieved_top_k": [
+            {
+                "cid": "193372",
+                "rerank_score": 0.9997,
+                "vector_score": 0.9167,
+                "text_snippet": "Trách nhiệm tổ chức phong trào thi đua trong Công an nhân dân 1. Bộ trưởng Bộ Công an tổ chức phát động phong trào thi đua trong toàn lực lượng Công an nhân dân. 2. Thủ trưởng đơn vị trực thuộc Bộ Công an, Giám đốc Công an tỉnh, thành phố trực thuộc trung ương có trách nhiệm tổ chức thực hiện phong trào thi đua do Bộ trưởng Bộ Công an phát động. 3. Cục Công tác đảng và công tác chính trị có trách nhiệm tham mưu giúp Bộ trưởng Bộ Công an thống nhất quản lý, chỉ đạo, hướng dẫn, kiểm tra và tổ chức thực hiện phong trào thi đua trong toàn lực lượng Công an nhân dân. Phòng thực hiện chức năng công tác chính trị của đơn vị trực thuộc Bộ Công an, Phòng Công tác đảng và công tác chính trị của Công an tỉnh, thành phố trực thuộc trung ương có trách nhiệm tham mưu giúp Thủ trưởng đơn vị trực thuộc Bộ Công an, Giám đốc Công an tỉnh, thành phố trực thuộc trung ương thống nhất quản lý, chỉ đạo, hướng dẫn, kiểm tra và tổ chức thực hiện phong trào thi đua trong Công an đơn vị, địa phương đó. 4. Cơ quan truyền thông trong Công an nhân dân có trách nhiệm tuyên truyền về các phong trào thi đua; biểu dương, tôn vinh, nhân rộng các điển hình tiên tiến, gương người tốt, việc tốt trong các phong trào thi đua; đấu"
+            },
+            {
+                "cid": "8837",
+                "rerank_score": 0.9813,
+                "vector_score": 0.8667,
+                "text_snippet": "Trách nhiệm tổ chức triển khai phong trào thi đua 1. Bộ trưởng Bộ Lao động - Thương binh và Xã hội (sau đây gọi tắt là Bộ trưởng) phát động và chỉ đạo các phong trào thi đua trong toàn Ngành. 2. Hội đồng Thi đua - Khen thưởng Bộ Lao động - Thương binh và Xã hội (sau đây gọi tắt là Hội đồng Bộ), Hội đồng Thi đua - Khen thưởng ngành Lao động - Thương binh và Xã hội (sau đây gọi tắt là Hội đồng Ngành) có trách nhiệm tham mưu giúp Bộ trưởng về nội dung thi đua, tổ chức các phong trào thi đua, kiểm tra việc thực hiện trong phạm vi Bộ, Ngành. 3. Hội đồng Thi đua - Khen thưởng các cấp có trách nhiệm tham mưu cho thủ trưởng đơn vị cùng cấp tổ chức phát động, chỉ đạo phong trào thi đua trong đơn vị. 4. Thủ trưởng các đơn vị chủ động tổ chức phát động và chỉ đạo các phong trào thi đua trong phạm vi đơn vị. 5. Các đoàn thể phối hợp cấp ủy đảng, chính quyền tổ chức phát động các phong trào thi đua, nhân rộng các gương điển hình tiên tiến trong phạm vi đơn vị."
+            },
+            {
+                "cid": "21565",
+                "rerank_score": 0.9565,
+                "vector_score": 0.8699,
+                "text_snippet": "Trách nhiệm của các tổ chức, cơ quan, đơn vị, cá nhân trong triển khai tổ chức phong trào thi đua 1. Bộ trưởng Bộ Quốc phòng tổ chức phát động hưởng ứng các phong trào thi đua do Chủ tịch nước, Thủ tướng Chính phủ phát động; phát động, chỉ đạo, triển khai các phong trào thi đua có phạm vi toàn quân; xem xét, quyết định khen thưởng hoặc đề nghị Thủ tướng Chính phủ, Chủ tịch nước khen thưởng tập thể, cá nhân có thành tích trong phong trào thi đua. 2. Tổng cục Chính trị giúp Thường vụ Quân ủy Trung ương, Bộ trưởng Bộ Quốc phòng chỉ đạo, hướng dẫn, kiểm tra, đánh giá kết quả công tác thi đua, khen thưởng và phong trào thi đua Quyết thắng trong Quân đội. 3. Cấp ủy, chính ủy, chính trị viên (bí thư cấp ủy), người chỉ huy cơ quan, đơn vị chịu trách nhiệm lãnh đạo, chỉ đạo công tác thi đua, khen thưởng và phong trào thi đua Quyết thắng; phát hiện, lựa chọn tập thể, cá nhân có thành tích trong phong trào thi đua để khen thưởng theo thẩm quyền hoặc đề nghị cấp trên khen thưởng. 4. Cơ quan chính trị các cấp có trách nhiệm tham mưu, đề xuất với cấp ủy, chính ủy, chính trị viên, người chỉ huy lãnh đạo, chỉ đạo công tác thi đua, khen thưởng; hướng dẫn, kiểm tra, đánh giá kết quả công tác thi đua, khen thưởng; tham mưu,"
+            },
+            {
+                "cid": "21565",
+                "rerank_score": 0.9025,
+                "vector_score": 0.8665,
+                "text_snippet": "danh hiệu thi đua hoặc khen thưởng đối với tập thể, cá nhân theo phạm vi, chức năng, nhiệm vụ ngành mình phụ trách. 10. Các cơ quan thông tin, báo chí trong Quân đội có trách nhiệm thường xuyên, kịp thời tuyên truyền chủ trương, đường lối của Đảng, chính sách, pháp luật của Nhà nước, chỉ thị, nghị quyết của Quân ủy Trung ương, Bộ Quốc phòng, hướng dẫn của Tổng cục Chính trị về thi đua, khen thưởng; phát hiện, cổ vũ, phổ biến, nêu gương, nhân rộng điển hình tiên tiến, gương người tốt, việc tốt trong phong trào thi đua; tham gia đấu tranh ngăn chặn các hành vi vi phạm pháp luật về thi đua, khen thưởng."
+            },
+            {
+                "cid": "193371",
+                "rerank_score": 0.895,
+                "vector_score": 0.898,
+                "text_snippet": "Phong trào thi đua trong Công an nhân dân 1. Phong trào thi đua trong Công an nhân dân gồm phong trào thi đua “Vì an ninh Tổ quốc” và các phong trào thi đua khác. 2. Phong trào thi đua “Vì an ninh Tổ quốc” a) Phong trào thi đua “Vì an ninh Tổ quốc” được Bộ Công an tổ chức thường xuyên hằng năm nhằm phấn đấu đạt được thành tích tốt nhất trong thực hiện nhiệm vụ chính trị của lực lượng Công an nhân dân; b) Phong trào thi đua theo đợt (hoặc chuyên đề) trong Công an nhân dân phải gắn với phong trào thi đua “Vì an ninh Tổ quốc” nhằm thực hiện tốt phong trào thi đua “Vì an ninh Tổ quốc”. 3. Lực lượng Công an nhân dân hưởng ứng, tổ chức phát động các phong trào thi đua do Chủ tịch nước, Thủ tướng Chính phủ phát động, các phong trào thi đua nhằm phấn đấu thực hiện tốt nhiệm vụ bảo vệ an ninh quốc gia, bảo đảm trật tự, an toàn xã hội và xây dựng lực lượng Công an nhân dân."
+            }
+        ]
+    },
+    {
+        "qid": 161548,
+        "question": "Cơ quan nhà nước tổ chức lễ 30/4 kỷ niệm ngày Giải phóng miền Nam, thống nhất đất nước trong hội trường vào năm lẻ 5 được trang trí như thế nào?",
+        "ground_truth_cids": [
+            "19995"
+        ],
+        "retrieved_top_k": [
+            {
+                "cid": "19995",
+                "rerank_score": 0.9401,
+                "vector_score": 0.8371,
+                "text_snippet": "Trang trí buổi lễ 1. Buổi lễ được tổ chức trong hội trường hoặc ngoài trời. 2. Tổ chức trong hội trường: a) Treo Quốc kỳ hoặc Quốc kỳ và Đảng kỳ về phía bên trái của lễ đài; Quốc kỳ ở bên phải, Đảng kỳ ở bên trái (nhìn từ phía dưới lên); b) Tượng bán thân Chủ tịch Hồ Chí Minh đặt trên bục cao phía dưới Quốc kỳ hoặc phía dưới giữa Quốc kỳ và Đảng kỳ. Trường hợp cờ được treo trên cột thì tượng Chủ tịch Hồ Chí Minh được đặt chếch phía trước bên phải cột cờ (nhìn từ phía dưới lên); c) Tiêu đề buổi lễ được thể hiện bằng kiểu chữ chân phương trên nền phông về phía bên phải lễ đài. Nếu kết hợp trao tặng, đón nhận danh hiệu thi đua hoặc hình thức khen thưởng phải ghi đầy đủ danh hiệu thi đua hoặc hình thức khen thưởng cao nhất được đón nhận; d) Hoa trang trí đặt ở phía dưới, trước tượng Chủ tịch Hồ Chí Minh. Lẵng hoa của Lãnh đạo Đảng, Nhà nước tặng được đặt ở vị trí trang trọng. Không đặt nhiều lẵng hoa, cây cảnh trên lễ đài; đ) Khẩu hiệu của buổi lễ được treo ở vị trí nổi bật, phù hợp với không gian hội trường. Nội dung khẩu hiệu do Ban Tổ chức quyết định; e) Bên ngoài hội trường treo Quốc kỳ ở vị trí trang trọng, cờ trang trí, băng khẩu hiệu, tạo cảnh"
+            },
+            {
+                "cid": "19995",
+                "rerank_score": 0.7927,
+                "vector_score": 0.8396,
+                "text_snippet": "trường. Nội dung khẩu hiệu do Ban Tổ chức quyết định; e) Bên ngoài hội trường treo Quốc kỳ ở vị trí trang trọng, cờ trang trí, băng khẩu hiệu, tạo cảnh quan phù hợp với buổi lễ; g) Khách mời được bố trí ngồi theo thứ tự từ giữa ra hai bên, từ phía trước ra phía sau. 3. Tổ chức ngoài trời: a) Buổi lễ ngoài trời được tổ chức tại quảng trường, sân vận động hoặc một địa điểm trang trọng khác do Ban Tổ chức quyết định; b) Lễ đài được thiết kế vững chắc, trang trí tương tự như tổ chức trong hội trường. 4. Cờ truyền thống a) Cờ truyền thống được may bằng vải; hình chữ nhật, chiều rộng bằng 2/3 chiều dài; b) Bảo đảm thuần phong mỹ tục văn hóa Việt Nam, không trái với quy định của pháp luật."
+            },
+            {
+                "cid": "223420",
+                "rerank_score": 0.7781,
+                "vector_score": 0.8374,
+                "text_snippet": "Trang trí lễ đài tổ chức Lễ tang Thực hiện theo quy định tại Điều 40 Nghị định số 105/2012/NĐ-CP và một số nội dung sau: ..."
+            },
+            {
+                "cid": "64137",
+                "rerank_score": 0.7163,
+                "vector_score": 0.8517,
+                "text_snippet": "Ngày Giải phóng miền Nam, thống nhất đất nước (30-4-1975); Ngày Chiến thắng Điện Biên Phủ (07-5-1954); Ngày Cách mạng Tháng Tám (19-8-1945) và Ngày Quốc khánh nước Cộng hòa xã hội chủ nghĩa Việt Nam (02-9-1945) 1. Năm lẻ 5, năm khác: a) Các đơn vị không tổ chức mít tinh kỷ niệm; tổ chức các hoạt động tuyên truyền, giáo dục, thi đua, cổ động trực quan, văn hóa, văn nghệ, thể dục, thể thao chào mừng kỷ niệm; tham gia viếng các anh hùng liệt sĩ tại nghĩa trang do địa phương tổ chức (nếu có); b) Các Cơ quan thông tấn, báo chí trong Quân đội mở các chuyên trang, chuyên mục tuyên truyền, đưa tin về sự kiện; c) Các đơn vị văn hóa, nghệ thuật xây dựng và biểu diễn các chương trình nghệ thuật, tổ chức triển lãm, chiếu phim phục vụ bộ đội và nhân dân; đ) Trường hợp đặc biệt, Tổng cục Chính trị có hướng dẫn thực hiện cụ thể. 2. Năm tròn: a) Các đơn vị tổ chức cho bộ đội theo dõi chương trình Đài Truyền hình Việt Nam hoặc Đài Tiếng nói Việt Nam phát trực tiếp Lễ kỷ niệm cấp quốc gia; b) Tổng cục Chính trị chủ trì, phối hợp với các cơ quan xây dựng kế hoạch của Bộ Quốc phòng về tổ chức các hoạt động kỷ niệm; chỉ đạo, hướng dẫn tổ chức các hoạt động tuyên truyền, giáo dục, thi đua trong Quân đội; c) Bộ Tổng"
+            },
+            {
+                "cid": "65681",
+                "rerank_score": 0.574,
+                "vector_score": 0.8459,
+                "text_snippet": "Khánh tiết, trang trí lễ kỷ niệm ... 3. Tổ chức ngoài trời a) Lễ kỷ niệm ngoài trời được tổ chức tại quảng trường, sân vận động hoặc một địa điểm trang trọng khác do Ban Tổ chức quyết định; b) Lễ đài được thiết kế vững chắc, trang trí tương tự như tổ chức trong hội trường. Trường hợp khu vực lễ đài đã có tượng, hình ảnh Chủ tịch Hồ Chí Minh thì không áp dụng theo quy định tại điểm b khoản 1 Điều này. Trường hợp trước lễ đài đã có cột cờ thì Quốc kỳ được treo trên cột cờ và không treo Quốc kỳ trên lễ đài."
+            }
+        ]
+    },
+    {
+        "qid": 92450,
+        "question": "Hồ sơ đề nghị đặc xá gồm những thành phần nào?",
+        "ground_truth_cids": [
+            "72413"
+        ],
+        "retrieved_top_k": [
+            {
+                "cid": "140138",
+                "rerank_score": 0.5726,
+                "vector_score": 0.8668,
+                "text_snippet": "“Điều 4. Nguyên tắc thực hiện đặc xá 1. Tuân thủ Hiến pháp, pháp luật; bảo đảm lợi ích của Nhà nước, quyền và lợi ích hợp pháp của tổ chức, cá nhân. 2. Bảo đảm dân chủ, công bằng, khách quan, công khai, minh bạch. 3. Bảo đảm yêu cầu về đối nội, đối ngoại, an ninh quốc gia, trật tự, an toàn xã hội.”"
+            },
+            {
+                "cid": "72413",
+                "rerank_score": 0.4694,
+                "vector_score": 0.862,
+                "text_snippet": "“Điều 14. Hồ sơ đề nghị đặc xá 1. Đơn đề nghị đặc xá. 2. Tài liệu chứng minh về cá nhân, hoàn cảnh gia đình của người được đề nghị đặc xá. 3. Tài liệu chứng minh đã chấp hành xong hình phạt bổ sung là phạt tiền, đã nộp án phí. Trường hợp được miễn chấp hành hình phạt tiền, miễn nộp án phí phải có quyết định của Tòa án có thẩm quyền. Người bị kết án phạt tù về các tội phạm quy định tại điểm d khoản 1 Điều 11 của Luật này phải có tài liệu chứng minh đã thi hành xong nghĩa vụ trả lại tài sản, bồi thường thiệt hại, nghĩa vụ dân sự khác. Người thuộc trường hợp quy định tại điểm đ khoản 1 Điều 11 của Luật này phải có tài liệu chứng minh đã thi hành xong hoặc có tài liệu chứng minh đã thi hành được một phần nghĩa vụ trả lại tài sản, bồi thường thiệt hại hoặc nghĩa vụ dân sự khác và có quyết định của cơ quan thi hành án dân sự có thẩm quyền về việc chưa có điều kiện thi hành án. Trường hợp người được thi hành án đồng ý hoãn thi hành án hoặc không yêu cầu thi hành án đối với tài sản không thuộc sở hữu của Nhà nước thì phải có văn bản của người được thi hành án có xác nhận của cơ quan có thẩm quyền. Người thuộc trường hợp"
+            },
+            {
+                "cid": "124172",
+                "rerank_score": 0.4488,
+                "vector_score": 0.8796,
+                "text_snippet": "HỒ SƠ, TRÌNH TỰ VÀ THỦ TỤC XÉT ĐẶC XÁ ... 2. Trình tự, thủ tục lập hồ sơ, danh sách người đủ điều kiện được đề nghị đặc xá ... b) Trình tự, thủ tục lập hồ sơ đề nghị đặc xá trong trường hợp đặc biệt: - Chính phủ giao Bộ Công an, Bộ Quốc phòng chỉ đạo các trại giam, trại tạm giam, cơ quan thi hành án hình sự Công an cấp huyện lập hồ sơ đề nghị đặc xá trong trường hợp đặc biệt đối với phạm nhân đang chấp hành án phạt tù mà có yêu cầu đối nội, đối ngoại; - Tòa án nhân dân tối cao chỉ đạo, hướng dẫn Tòa án nhân dân, Tòa án quân sự các cấp lập hồ sơ, danh sách đề nghị đặc xá trong trường hợp đặc biệt đối với người đang được tạm đình chỉ chấp hành án phạt tù không đủ điều kiện đề nghị đặc xá mà có yêu cầu đối nội, đối ngoại hoặc người đang được hoãn chấp hành án phạt tù mà có yêu cầu đối nội, đối ngoại; tập hợp hồ sơ, danh sách người đang được hoãn, tạm đình chỉ chấp hành án phạt tù được đề nghị đặc xá trong trường hợp đặc biệt trình các cơ quan có thẩm quyền xét duyệt; - Chính phủ chủ trì, phối hợp với Tòa án nhân dân tối cao, Viện kiểm sát nhân dân tối cao và các cơ quan, tổ chức có liên quan"
+            },
+            {
+                "cid": "244554",
+                "rerank_score": 0.0928,
+                "vector_score": 0.8638,
+                "text_snippet": "Quyết định về đặc xá là văn bản do Chủ tịch nước ban hành quy định thời điểm đặc xá, đối tượng, điều kiện của người được đề nghị đặc xá nhân sự kiện trọng đại, ngày lễ lớn của đất nước và trách nhiệm của cơ quan, tổ chức trong việc thực hiện đặc xá."
+            },
+            {
+                "cid": "223438",
+                "rerank_score": 0.0889,
+                "vector_score": 0.8632,
+                "text_snippet": "\"Điều 2. Đối tượng đặc xá bao gồm: Người đang chấp hành án phạt tù có thời hạn, người bị kết án tù chung thân đã được giảm xuống tù có thời hạn, người đang được tạm đình chỉ chấp hành án phạt tù.\" \"Điều 4. Nguyên tắc thực hiện đặc xá 1. Tuân thủ Hiến pháp, pháp luật; bảo đảm lợi ích của Nhà nước, quyền và lợi ích hợp pháp của tổ chức, cá nhân. 2. Bảo đảm dân chủ, công bằng, khách quan, công khai, minh bạch. 3. Bảo đảm yêu cầu về đối nội, đối ngoại, an ninh quốc gia, trật tự, an toàn xã hội.\" \"Điều 5. Thời điểm đặc xá 1. Chủ tịch nước xem xét, quyết định về đặc xá nhân sự kiện trọng đại, ngày lễ lớn của đất nước. 2. Chủ tịch nước xem xét, quyết định đặc xá trong trường hợp đặc biệt để đáp ứng yêu cầu đối nội, đối ngoại của Nhà nước mà không phụ thuộc vào thời điểm quy định tại khoản 1 Điều này.\""
+            }
+        ]
+    },
+    {
+        "qid": 147836,
+        "question": "Các hoạt động trong phòng thủ dân sự luôn ưu tiên các đối tượng dễ bị tổn thương có đúng không?",
+        "ground_truth_cids": [
+            "226988"
+        ],
+        "retrieved_top_k": [
+            {
+                "cid": "226988",
+                "rerank_score": 0.99,
+                "vector_score": 0.8811,
+                "text_snippet": "thấp nhất thiệt hại về người và tài sản, ổn định đời sống Nhân dân. 5. Kết hợp phòng thủ dân sự với bảo đảm quốc phòng, an ninh, phát triển kinh tế - xã hội, bảo vệ tính mạng, sức khoẻ, tài sản của Nhân dân, bảo vệ môi trường, hệ sinh thái và thích ứng với biển đổi khí hậu. 6. Việc áp dụng các biện pháp, huy động nguồn lực trong phòng thủ dân sự phải kịp thời, hợp lý, khả thi, hiệu quả, tránh lãng phí và phù hợp với đối tượng, cấp độ phòng thủ dân sự theo quy định của Luật này và quy định khác của pháp luật có liên quan. 7. Hoạt động phòng thủ dân sự phải bảo đảm tính nhân đạo, công bằng, minh bạch, bình đẳng giới và ưu tiên đối tượng dễ bị tổn thương."
+            },
+            {
+                "cid": "124474",
+                "rerank_score": 0.5001,
+                "vector_score": 0.8474,
+                "text_snippet": "Công dân có nghĩa vụ trung thành với Tổ quốc. Phản bội Tổ quốc là tội nặng nhất."
+            },
+            {
+                "cid": "63474",
+                "rerank_score": 0.369,
+                "vector_score": 0.8479,
+                "text_snippet": "phục vụ quốc phòng, an ninh có tính chất nguy hiểm; h) Do tai nạn khi đang trực tiếp làm nhiệm vụ quốc phòng, an ninh ở địa bàn biên giới, trên biển, hải đảo có điều kiện đặc biệt khó khăn theo danh mục do Chính phủ quy định; i) Trực tiếp làm nhiệm vụ đấu tranh chống tội phạm; k) Đặc biệt dũng cảm cứu người, cứu tài sản của Nhà nước, của Nhân dân hoặc ngăn chặn, bắt giữ người có hành vi phạm tội, là tấm gương có ý nghĩa tôn vinh, giáo dục, lan tỏa rộng rãi trong xã hội. 2. Người không phải là sĩ quan, quân nhân chuyên nghiệp, hạ sĩ quan, binh sĩ trong Quân đội nhân dân và sĩ quan, hạ sĩ quan, chiến sĩ trong Công an nhân dân bị thương có tỷ lệ tổn thương cơ thể từ 21% trở lên thuộc một trong các trường hợp quy định tại khoản 1 Điều này thì được cơ quan, đơn vị có thẩm quyền xem xét công nhận là người hưởng chính sách như thương binh và cấp “Giấy chứng nhận người hưởng chính sách như thương binh”. 3. Thương binh loại B là quân nhân, công an nhân dân bị thương có tỷ lệ tổn thương cơ thể từ 21% trở lên trong khi tập luyện, công tác đã được cơ quan, đơn vị có thẩm quyền công nhận trước ngày 31 tháng 12 năm 1993. 4. Thương binh, người hưởng chính sách như thương"
+            },
+            {
+                "cid": "31641",
+                "rerank_score": 0.2026,
+                "vector_score": 0.8576,
+                "text_snippet": "Phòng thủ dân sự 1. Phòng thủ dân sự là bộ phận của phòng thủ đất nước bao gồm các biện pháp phòng, chống chiến tranh; phòng, chống, khắc phục hậu quả thảm họa, sự cố, thiên tai, dịch bệnh; bảo vệ Nhân dân, cơ quan, tổ chức và nền kinh tế quốc dân. 2. Nhiệm vụ phòng thủ dân sự bao gồm: a) Xây dựng cơ chế hoạt động, kế hoạch phòng thủ dân sự; b) Tuyên truyền, giáo dục, bồi dưỡng, tập huấn, huấn luyện, diễn tập; c) Xây dựng hệ thống công trình phòng thủ dân sự; d) Xây dựng hệ thống tiếp nhận, xử lý thông tin, nghiên cứu dự báo, cảnh báo, thông báo, báo động; đ) Thực hiện các biện pháp phòng thủ dân sự. 3. Lực lượng phòng thủ dân sự bao gồm: a) Lực lượng nòng cốt gồm Dân quân tự vệ; Công an xã, phường, thị trấn; lực lượng chuyên trách hoặc kiêm nhiệm của Quân đội nhân dân, Công an nhân dân và các Bộ, ngành trung ương, địa phương; b) Lực lượng rộng rãi do toàn dân tham gia. 4. Chính phủ quy định chi tiết Điều này."
+            },
+            {
+                "cid": "2541",
+                "rerank_score": 0.1914,
+                "vector_score": 0.8526,
+                "text_snippet": "Nguyên tắc tổ chức và hoạt động phòng thủ dân sự 1. Tuân thủ Hiến pháp và pháp luật của nước Cộng hòa xã hội chủ nghĩa Việt Nam. 2. Phòng thủ dân sự đặt dưới sự lãnh đạo, chỉ đạo trực tiếp, toàn diện của Đảng, sự quản lý thống nhất của Chính phủ, trực tiếp là sự lãnh đạo, chỉ đạo của các cấp ủy đảng, quản lý, điều hành của chính quyền các cấp và người đứng đầu các cơ quan, tổ chức; phát huy sức mạnh tổng hợp của cả hệ thống chính trị và toàn dân. 3. Phòng thủ dân sự được tổ chức từ trung ương đến địa phương, cơ sở. Người đứng đầu các cơ quan, tổ chức, địa phương chịu trách nhiệm tổ chức thực hiện phòng thủ dân sự. 4. Tăng cường, củng cố năng lực phòng thủ dân sự là nhiệm vụ trọng yếu, thường xuyên; phòng thủ dân sự phải được chuẩn bị từ trước khi xảy ra các thảm họa, chiến tranh; tích cực thực hiện phương châm phòng là chính; chủ động ứng phó kịp thời khi có thảm họa, chiến tranh, khắc phục hậu quả; phát huy vai trò của lực lượng tại chỗ, phương tiện tại chỗ, chỉ huy tại chỗ, hậu cần tại chỗ. 5. Mở rộng, tăng cường hợp tác quốc tế trong lĩnh vực phòng thủ dân sự."
+            }
+        ]
+    },
+    {
+        "qid": 120496,
+        "question": "Trình Chính phủ quy định điều chỉnh kế hoạch sử dụng đất các địa phương trong tháng 9/2023 đúng không?",
+        "ground_truth_cids": [
+            "196413"
+        ],
+        "retrieved_top_k": [
+            {
+                "cid": "196413",
+                "rerank_score": 0.9429,
+                "vector_score": 0.8856,
+                "text_snippet": "Về tình hình kinh tế - xã hội tháng 8 và 8 tháng đầu năm 2023 ... 9. Bộ Tài nguyên và Môi trường chủ trì, phối hợp với các cơ quan, địa phương chủ động làm việc, phối hợp chặt chẽ với các cơ quan của Quốc hội trong quá trình hoàn thiện Dự án Luật Đất đai (sửa đổi) để trình Quốc hội tại Kỳ họp thứ 6. Nâng cao chất lượng, hiệu quả công tác dự báo, cảnh báo kịp thời các hiện tượng thời tiết, thủy văn cực đoan, nguy hiểm. Hoàn thành việc hướng dẫn tính giá đất theo chỉ đạo của Thủ tướng Chính phủ. Khẩn trương trình Chính phủ về việc điều chỉnh kế hoạch sử dụng đất của các địa phương trong tháng 9 năm 2023 để trình Quốc hội tại Kỳ họp thứ 6."
+            },
+            {
+                "cid": "105860",
+                "rerank_score": 0.0688,
+                "vector_score": 0.8697,
+                "text_snippet": "làm thay đổi hệ số sử dụng đất nhưng không làm thay đổi diện tích đất sử dụng thì phải xác định lại giá đất tại thời điểm cơ quan nhà nước có thẩm quyền quyết định điều chỉnh quy hoạch xây dựng chi tiết để tính tiền sử dụng đất, tiền thuê đất bổ sung. 5. Chính phủ quy định chi tiết Điều này.”"
+            },
+            {
+                "cid": "183340",
+                "rerank_score": 0.0269,
+                "vector_score": 0.8674,
+                "text_snippet": "Điều chỉnh quy hoạch, kế hoạch sử dụng đất 1. Việc điều chỉnh quy hoạch sử dụng đất quốc gia, quy hoạch sử dụng đất quốc phòng, quy hoạch sử dụng đất an ninh được thực hiện theo quy định của pháp luật về quy hoạch. 2. Việc điều chỉnh quy hoạch sử dụng đất cấp huyện được thực hiện khi có một trong các căn cứ sau đây: a) Có sự điều chỉnh chiến lược phát triển kinh tế - xã hội, quốc phòng, an ninh của quốc gia, quy hoạch cấp quốc gia, quy hoạch vùng, quy hoạch tỉnh mà sự điều chỉnh đó làm thay đổi cơ cấu sử dụng đất; b) Do tác động của thiên tai, chiến tranh làm thay đổi mục đích, cơ cấu, vị trí, diện tích sử dụng đất; c) Có sự điều chỉnh địa giới hành chính của địa phương. 3. Việc điều chỉnh kế hoạch sử dụng đất chỉ được thực hiện khi có sự điều chỉnh quy hoạch sử dụng đất hoặc có sự thay đổi về khả năng thực hiện kế hoạch sử dụng đất. 4. Nội dung điều chỉnh quy hoạch sử dụng đất là một phần của quy hoạch sử dụng đất đã được quyết định, phê duyệt. Nội dung điều chỉnh kế hoạch sử dụng đất là một phần của kế hoạch sử dụng đất đã được quyết định, phê duyệt. Việc điều chỉnh quy hoạch sử dụng đất cấp huyện, kế hoạch sử dụng đất thực hiện theo quy định"
+            },
+            {
+                "cid": "157402",
+                "rerank_score": 0.0258,
+                "vector_score": 0.8756,
+                "text_snippet": "Về tình hình kinh tế - xã hội tháng 7 và 7 tháng năm 2022; tình hình triển khai thực hiện Nghị quyết số 01/NQ-CP của Chính phủ ... 9, Bộ Tài nguyên và Môi trường chủ trì, phối hợp với các cơ quan, địa phương: a) Tập trung sửa đổi Luật Đất đai, Luật Tài nguyên nước, bảo đảm chất lượng, tiến độ quy định. Khẩn trương hoàn thành việc xây dựng Quy hoạch không gian biến quốc gia, trình Thủ tướng Chính phủ trong tháng 8 năm 2020 theo yêu cầu tại Nghị quyết số 85/NQ-CP ngày 09 tháng 7 năm 2022 để báo cáo cấp có thẩm quyền theo quy định. b) Chủ trì, phối hợp với Bộ Xây dựng, Bộ Công Thương và các bộ, cơ quan liên quan thống nhất hướng dẫn cụ thể việc cấp phép đất đá thải tại các bãi thải của các mỏ thuộc thẩm quyền cấp phép của Bộ Tài nguyên và Môi trường để cung cấp nguồn nguyên liệu đất san lấp phục vụ cho các công trình, dự án. c) Hướng dẫn trình tự, thủ tục cấp phép khai thác đất san lấp làm vật liệu xây dựng thông thường cho các dự án có thời gian thi công ngắn, quy mô nhỏ lẻ, nhất là các khu đất tại các dự án đầu tư xây dựng cơ bản, phát sinh khối lượng phải xử lý, vận chuyển đi nơi khác; hướng dẫn thủ tục liên quan đến cấp phép mở vật liệu xây"
+            },
+            {
+                "cid": "77448",
+                "rerank_score": 0.0104,
+                "vector_score": 0.8689,
+                "text_snippet": "I. Về tình hình kinh tế - xã hội tháng 7 và 7 tháng đầu năm 2023 ... 9. Bộ Tài nguyên và Môi trường chủ trì, phối hợp với các cơ quan, địa phương: a) Tăng cường công tác quản lý tài nguyên, bảo vệ môi trường; tiếp tục rà soát, trình cấp có thẩm quyền sửa đổi các quy định về chuyển mục đích sử dụng đất trồng lúa, đất rừng phòng hộ, đất rừng đặc dụng, khai thác khoáng sản..., bảo đảm đồng bộ, hiệu quả, đáp ứng nhu cầu phát triển kinh tế - xã hội của địa phương. b) Tham mưu, hoàn thiện cơ chế, chính sách, pháp luật về đất đai, đặc biệt là Luật Đất đai (sửa đổi); hướng dẫn triển khai tháo gỡ ngay các khó khăn, vướng mắc về pháp lý và trình tự, thủ tục liên quan đến đất đai, khai thác mỏ vật liệu xây dựng phục vụ triển khai các dự án phát triển kinh tế - xã hội và các dự án giao thông trọng điểm. Ban hành hướng dẫn về định giá đất trước ngày 15 tháng 8 năm 2023. c) Theo dõi, giám sát chặt chẽ, dự báo, cảnh báo kịp thời các hiện tượng thời tiết cực đoan, thiên tai nguy hiểm, nhất là bão, lũ, sạt lở đất, cung cấp thông tin đến các cơ quan, địa phương, người dân để chủ động chỉ đạo, ứng phó hiệu quả; kiểm tra, đánh giá các tai biến địa chất, môi"
+            }
+        ]
+    },
+    {
+        "qid": 50398,
+        "question": "Hội đồng thành viên có phải là cơ quan quyết định cao nhất của công ty trách nhiệm hữu hạn hai thành viên trở lên không?",
+        "ground_truth_cids": [
+            "50534"
+        ],
+        "retrieved_top_k": [
+            {
+                "cid": "50534",
+                "rerank_score": 0.9967,
+                "vector_score": 0.8791,
+                "text_snippet": "\"Điều 55. Hội đồng thành viên 1. Hội đồng thành viên là cơ quan quyết định cao nhất của công ty, bao gồm tất cả thành viên công ty là cá nhân và người đại diện theo ủy quyền của thành viên công ty là tổ chức. Điều lệ công ty quy định kỳ họp Hội đồng thành viên, nhưng ít nhất mỗi năm phải họp một lần. 2. Hội đồng thành viên có quyền và nghĩa vụ sau đây: a) Quyết định chiến lược phát triển và kế hoạch kinh doanh hằng năm của công ty; b) Quyết định tăng hoặc giảm vốn điều lệ, quyết định thời điểm và phương thức huy động thêm vốn; quyết định phát hành trái phiếu; c) Quyết định dự án đầu tư phát triển của công ty; giải pháp phát triển thị trường, tiếp thị và chuyển giao công nghệ; d) Thông qua hợp đồng vay, cho vay, bán tài sản và hợp đồng khác do Điều lệ công ty quy định có giá trị từ 50% tổng giá trị tài sản trở lên được ghi trong báo cáo tài chính tại thời điểm công bố gần nhất của công ty hoặc một tỷ lệ hoặc giá trị khác nhỏ hơn quy định tại Điều lệ công ty; đ) Bầu, miễn nhiệm, bãi nhiệm Chủ tịch Hội đồng thành viên; quyết định bổ nhiệm, miễn nhiệm, bãi nhiệm, ký và chấm dứt hợp đồng đối với Giám đốc hoặc Tổng giám đốc, Kế toán trưởng, Kiểm soát viên"
+            },
+            {
+                "cid": "146662",
+                "rerank_score": 0.9952,
+                "vector_score": 0.8969,
+                "text_snippet": "\"Điều 55. Hội đồng thành viên 1. Hội đồng thành viên là cơ quan quyết định cao nhất của công ty, bao gồm tất cả thành viên công ty là cá nhân và người đại diện theo ủy quyền của thành viên công ty là tổ chức. Điều lệ công ty quy định kỳ họp Hội đồng thành viên, nhưng ít nhất mỗi năm phải họp một lần. 2. Hội đồng thành viên có quyền và nghĩa vụ sau đây: ... đ) Bầu, miễn nhiệm, bãi nhiệm Chủ tịch Hội đồng thành viên; quyết định bổ nhiệm, miễn nhiệm, bãi nhiệm, ký và chấm dứt hợp đồng đối với Giám đốc hoặc Tổng giám đốc, Kế toán trưởng, Kiểm soát viên và người quản lý khác quy định tại Điều lệ công ty; ...\""
+            },
+            {
+                "cid": "220120",
+                "rerank_score": 0.872,
+                "vector_score": 0.8685,
+                "text_snippet": "bản với điều kiện phải có trên 1/2 (một phần hai) số thành viên của Hội đồng trở lên tham gia và quyết định theo nguyên tắc tán thành quá bán. Mỗi thành viên Hội đồng có một phiếu biểu quyết."
+            },
+            {
+                "cid": "50525",
+                "rerank_score": 0.7955,
+                "vector_score": 0.8785,
+                "text_snippet": "\"Điều 46. Công ty trách nhiệm hữu hạn hai thành viên trở lên 1. Công ty trách nhiệm hữu hạn hai thành viên trở lên là doanh nghiệp có từ 02 đến 50 thành viên là tổ chức, cá nhân. Thành viên chịu trách nhiệm về các khoản nợ và nghĩa vụ tài sản khác của doanh nghiệp trong phạm vi số vốn đã góp vào doanh nghiệp, trừ trường hợp quy định tại khoản 4 Điều 47 của Luật này. Phần vốn góp của thành viên chỉ được chuyển nhượng theo quy định tại các điều 51, 52 và 53 của Luật này. 2. Công ty trách nhiệm hữu hạn hai thành viên trở lên có tư cách pháp nhân kể từ ngày được cấp Giấy chứng nhận đăng ký doanh nghiệp. 3. Công ty trách nhiệm hữu hạn hai thành viên trở lên không được phát hành cổ phần, trừ trường hợp để chuyển đổi thành công ty cổ phần. 4. Công ty trách nhiệm hữu hạn hai thành viên trở lên được phát hành trái phiếu theo quy định của Luật này và quy định khác của pháp luật có liên quan; việc phát hành trái phiếu riêng lẻ phải tuân thủ quy định tại Điều 128 và Điều 129 của Luật này.\""
+            },
+            {
+                "cid": "50661",
+                "rerank_score": 0.7626,
+                "vector_score": 0.8715,
+                "text_snippet": "Hội đồng thành viên 1. Hội đồng thành viên bao gồm tất cả thành viên. Hội đồng thành viên bầu một thành viên hợp danh làm Chủ tịch Hội đồng thành viên, đồng thời kiêm Giám đốc hoặc Tổng giám đốc công ty nếu Điều lệ công ty không có quy định khác. 2. Thành viên hợp danh có quyền yêu cầu triệu tập họp Hội đồng thành viên để thảo luận và quyết định công việc kinh doanh của công ty. Thành viên yêu cầu triệu tập họp phải chuẩn bị nội dung, chương trình và tài liệu họp. 3. Hội đồng thành viên có quyền quyết định tất cả công việc kinh doanh của công ty. Nếu Điều lệ công ty không quy định thì quyết định các vấn đề sau đây phải được ít nhất ba phần tư tổng số thành viên hợp danh tán thành: a) Định hướng, chiến lược phát triển công ty; b) Sửa đổi, bổ sung Điều lệ công ty; c) Tiếp nhận thêm thành viên mới; d) Chấp thuận thành viên hợp danh rút khỏi công ty hoặc quyết định khai trừ thành viên; đ) Quyết định dự án đầu tư; e) Quyết định việc vay và huy động vốn dưới hình thức khác, cho vay với giá trị từ 50% vốn điều lệ của công ty trở lên, trừ trường hợp Điều lệ công ty quy định một tỷ lệ khác cao hơn; g) Quyết định mua, bán tài sản có giá trị bằng hoặc lớn hơn"
+            }
+        ]
+    },
+    {
+        "qid": 108415,
+        "question": "Để được hưởng mức phụ cấp lưu trú thì cán bộ công chức cần đáp ứng những điều kiện nào?",
+        "ground_truth_cids": [
+            "75449",
+            "42358"
+        ],
+        "retrieved_top_k": [
+            {
+                "cid": "204328",
+                "rerank_score": 0.9795,
+                "vector_score": 0.8753,
+                "text_snippet": "Phụ cấp lưu trú Phụ cấp lưu trú là khoản tiền hỗ trợ thêm cho người đi công tác ngoài tiền lương do cơ quan, đơn vị cử đi công tác chi trả, được tính từ ngày bắt đầu đi công tác đến khi kết thúc đợt công tác trở về cơ quan, đơn vị (bao gồm thời gian đi trên đường, thời gian lưu trú tại nơi đến công tác). Mức phụ cấp lưu trú như sau: 1. Mức 200.000 đồng/ngày: Áp dụng đối với thời gian đi trên đường từ 5 giờ/ngày trở lên hoặc từ 150 km/ngày trở lên đối với khu vực vùng sâu, miền núi đi lại khó khăn và 300 km/ngày trở lên đối với khu vực còn lại. 2. Mức 100.000 đồng/ngày: Áp dụng đối với thời gian lưu trú tại cơ quan, đơn vị nơi đến công tác. 3. Mức 250.000 đồng/ngày: Áp dụng đối với thời gian đi công tác thực tế trên biển của quân nhân, công nhân quốc phòng, viên chức quốc phòng, công chức quốc phòng đang công tác, làm việc ở đất liền được cử đi công tác trên biển, đảo. 4. Đối với trường hợp đi và về trong ngày nếu không đủ điều kiện quy định tại khoản 1 Điều này thì được áp dụng phụ cấp lưu trú quy định tại khoản 2 Điều này với điều kiện thời gian làm việc tại đơn vị và thời gian đi, về tối thiểu từ 5 giờ trở lên. 5. Đối với"
+            },
+            {
+                "cid": "42354",
+                "rerank_score": 0.972,
+                "vector_score": 0.878,
+                "text_snippet": "\"Điều 6. Phụ cấp lưu trú 1. Phụ cấp lưu trú là khoản tiền hỗ trợ thêm cho người đi công tác ngoài tiền lương do cơ quan, đơn vị cử người đi công tác chi trả, được tính từ ngày bắt đầu đi công tác đến khi kết thúc đợt công tác trở về cơ quan, đơn vị (bao gồm thời gian đi trên đường, thời gian lưu trú tại nơi đến công tác). Mức phụ cấp lưu trú để trả cho người đi công tác: 200.000 đồng/ngày. Trường hợp đi công tác trong ngày (đi và về trong ngày) thủ trưởng cơ quan, đơn vị quyết định mức phụ cấp lưu trú theo các tiêu chí: Căn cứ theo số giờ thực tế đi công tác trong ngày, theo thời gian phải làm ngoài giờ hành chính (bao gồm cả thời gian đi trên đường), quãng đường đi công tác và được quy định trong quy chế chi tiêu nội bộ của cơ quan, đơn vị. 2. Cán bộ, công chức, viên chức và người lao động ở đất liền được cử đi công tác làm nhiệm vụ trên biển, đảo thì được hưởng mức phụ cấp lưu trú: 250.000 đồng/người/ngày thực tế đi biển, đảo (áp dụng cho cả những ngày làm việc trên biển, đảo, những ngày đi, về trên biển, đảo). Trường hợp một số ngành đặc thù đã được cấp có thẩm quyền quy định về chế độ chi bồi dưỡng khi đi công tác trên biển, đảo thì được"
+            },
+            {
+                "cid": "126574",
+                "rerank_score": 0.6824,
+                "vector_score": 0.8723,
+                "text_snippet": "Tiêu chuẩn và mức chi công tác phí ... 2. Tiêu chuẩn và mức chi phụ cấp lưu trú: ... b) Đi công tác tại các địa bàn vùng núi cao, vùng sâu, vùng xa, vùng đặc biệt khó khăn (vùng có hệ số phụ cấp khu vực từ 0,5 trở lên); các quận thuộc thành phố trực thuộc trung ương; thành phố là đô thị loại I thuộc tỉnh: - Đối với trường hợp đi công tác ngắn ngày (trong vòng 20 ngày) mức phụ cấp lưu trú được thanh toán tối đa không quá 200.000 đồng/ngày/người. - Đối với những trường hợp đi công tác dài ngày (trên 20 ngày) mức phụ cấp lưu trú được thanh toán tối đa không quá 150.000 đồng/ngày/người. c) Đi công tác tại các vùng còn lại: - Đối với trường hợp đi công tác ngắn ngày (trong vòng 20 ngày) mức phụ cấp lưu trú được thanh toán tối đa không quá 150.000 đồng/ngày/người. - Đối với những trường hợp đi công tác dài ngày (trên 20 ngày) mức phụ cấp lưu trú được thanh toán tối đa không quá 100.000 đồng/ngày/người. d) Trường hợp đi công tác trong ngày (đi và về trong ngày), cách trụ sở cơ quan từ 30 km trở lên thì được thanh toán phụ cấp lưu trú bằng 50% mức chi quy định tại điểm a, b, c nêu trên. ..."
+            },
+            {
+                "cid": "204328",
+                "rerank_score": 0.5565,
+                "vector_score": 0.8658,
+                "text_snippet": "quy định tại khoản 2 Điều này với điều kiện thời gian làm việc tại đơn vị và thời gian đi, về tối thiểu từ 5 giờ trở lên. 5. Đối với quân nhân, công nhân quốc phòng, viên chức quốc phòng, công chức quốc phòng khi làm nhiệm vụ (huấn luyện, chiến đấu, tuần tra, cứu nạn, vận chuyển và các nhiệm vụ khác) trên tàu chiến đấu các loại, tàu cảnh sát biển, tàu kiểm ngư, tàu tìm kiếm cứu hộ, cứu nạn trên biển, tàu vận tải phục vụ trên biển thì những ngày thực tế đi biển được hưởng chế độ bồi dưỡng đi biển, phụ cấp ngày đi biển và phụ cấp đặc thù đi biển theo quy định (không được hưởng chế độ phụ cấp lưu trú quy định tại khoản 3 Điều này)."
+            },
+            {
+                "cid": "69464",
+                "rerank_score": 0.5019,
+                "vector_score": 0.8687,
+                "text_snippet": "Chế độ, chính sách đối với công chức được điều động, luân chuyển, biệt phái 1. Công chức giữ chức vụ được điều động đến vị trí công tác khác mà phụ cấp chức vụ mới thấp hơn phụ cấp chức vụ hiện đang đảm nhiệm thì được bảo lưu chênh lệch phụ cấp chức vụ trong thời gian 06 tháng, kể từ ngày quyết định có hiệu lực. Công chức giữ chức vụ được điều động do yêu cầu công tác, nguyện vọng hoặc do sắp xếp của tổ chức mà không được giữ chức vụ thì được bảo lưu phụ cấp chức vụ (nếu có) trong thời gian 06 tháng, kể từ ngày quyết định có hiệu lực. 2. Công chức được luân chuyển đến vị trí công tác khác mà phụ cấp chức vụ mới thấp hơn phụ cấp chức vụ hiện đang đảm nhiệm thì được bảo lưu phụ cấp chức vụ hiện đang được hưởng trong thời gian luân chuyển. 3. Công chức được biệt phái do cơ quan đơn vị trước khi biệt phái trả lương và bảo đảm các quyền lợi khác trong thời gian biệt phái. Công chức được biệt phái đến làm việc ở miền núi, biên giới, hải đảo, vùng sâu, vùng xa, vùng dân tộc thiểu số, vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn còn được hưởng các chế độ, chính sách ưu đãi theo quy định của pháp luật."
+            }
+        ]
+    },
+    {
+        "qid": 160786,
+        "question": "Hội thi giáo viên làm tổng phụ trách Đội thiếu niên tiền phong Hồ Chí Minh giỏi ở trường tiểu học có hình thức thi viết không?",
+        "ground_truth_cids": [
+            "189850"
+        ],
+        "retrieved_top_k": [
+            {
+                "cid": "189850",
+                "rerank_score": 0.9469,
+                "vector_score": 0.8895,
+                "text_snippet": "thi a) Giáo viên làm tổng phụ trách Đội nộp cho ban tổ chức hội thi báo cáo sáng kiến kinh nghiệm, mô hình hoặc kết quả nghiên cứu khoa học sư phạm ứng dụng về lĩnh vực công tác Đội và phong trào thiếu nhi có kèm theo nhận xét, đánh giá và xếp loại của nhà trường hoặc của phòng giáo dục và đào tạo, sở giáo dục và đào tạo; b) Bài thi kiểm tra hiểu biết là bài thi viết hoặc hỏi đáp. Thời gian thi do trưởng ban tổ chức hội thi quy định. Nếu là thi viết, có thể bằng hình thức tự luận, trắc nghiệm khách quan hoặc kết hợp cả hai hình thức trên; c) Thi thực hành kỹ năng, nghiệp vụ công tác Đội và phong trào thiếu nhi được tổ chức trên học sinh tiểu học đối với giáo viên làm tổng phụ trách Đội trường tiểu học và học sinh trung học cơ sở đối với giáo viên làm tổng phụ trách Đội trường trung học cơ sở và trường phổ thông có nhiều cấp học. Giáo viên làm tổng phụ trách Đội được thông báo và có thời gian chuẩn bị cho nội dung thực hành trong thời gian ít nhất là một tuần trước thời điểm thi thực hành; d) Thi năng khiếu tổng phụ trách Đội được tổ chức theo hình thức thi cá nhân hoặc thi nhóm và do giáo viên làm tổng phụ trách Đội lựa chọn hình thức thi"
+            },
+            {
+                "cid": "189850",
+                "rerank_score": 0.6915,
+                "vector_score": 0.8872,
+                "text_snippet": "Nội dung và hình thức thi giáo viên làm tổng phụ trách Đội giỏi 1. Nội dung thi a) Báo cáo sáng kiến kinh nghiệm, mô hình hoặc kết quả nghiên cứu khoa học sư phạm ứng dụng về lĩnh vực công tác Đội và phong trào thiếu nhi được đánh giá trong thời gian bốn năm gần nhất năm tổ chức hội thi; b) Một bài thi đánh giá sự hiểu biết về tổ chức Đội thiếu niên tiền phong Hồ Chí Minh, các phong trào và các cuộc vận động lớn của Đội, kỹ năng lập kế hoạch, xây dựng chương trình hoạt động Đội hoặc những hiểu biết về chủ trương, đường lối, định hướng đổi mới giáo dục và các nội dung chỉ đạo của ngành (gọi tắt là bài thi kiến thức và kỹ năng); c) Thi thực hành kỹ năng, nghiệp vụ làm công tác Đội và phong trào thiếu nhi tại thời điểm diễn ra hội thi, trong đó có một nội dung do giáo viên làm tổng phụ trách Đội tự chọn và một nội dung do ban tổ chức quy định bằng hình thức bốc thăm; d) Thi năng khiếu tổng phụ trách Đội về các lĩnh vực nghệ thuật do giáo viên làm tổng phụ trách Đội dự thi lựa chọn. 2. Hình thức thi a) Giáo viên làm tổng phụ trách Đội nộp cho ban tổ chức hội thi báo cáo sáng kiến kinh nghiệm, mô hình hoặc kết quả nghiên cứu khoa học sư"
+            },
+            {
+                "cid": "2817",
+                "rerank_score": 0.2328,
+                "vector_score": 0.8773,
+                "text_snippet": "vụ cụ thể được giao; h) Được công nhận là chiến sĩ thi đua cấp cơ sở; hoặc được nhận bằng khen, giấy khen từ cấp huyện trở lên; hoặc được công nhận đạt một trong các danh hiệu: giáo viên dạy giỏi, giáo viên chủ nhiệm lớp giỏi từ cấp trường trở lên, giáo viên làm Tổng phụ trách Đội Thiếu niên tiền phong Hồ Chí Minh giỏi từ cấp huyện trở lên; i) Viên chức dự thi hoặc xét thăng hạng chức danh nghề nghiệp giáo viên tiểu học hạng II (mã số V.07.03.28) phải có thời gian giữ chức danh nghề nghiệp giáo viên tiểu học hạng III (mã số V.07.03.29) hoặc tương đương từ đủ 09 (chín) năm trở lên (không kể thời gian tập sự), tính đến thời hạn nộp hồ sơ đăng ký dự thi hoặc xét thăng hạng."
+            },
+            {
+                "cid": "158699",
+                "rerank_score": 0.138,
+                "vector_score": 0.8661,
+                "text_snippet": "Phạm vi điều chỉnh và đối tượng áp dụng 1. Tổng phụ trách Đội là chức danh áp dụng cho giáo viên được tuyển chọn để cử làm Tổng phụ trách đội trong trường Tiểu học, Trung học cơ sở bao gồm trường trung học có cấp tiểu học hoặc cấp trung học cơ sở) và là người phụ trách tổ chức Đội Thiếu niên Tiền phong Hồ Chí Minh trong trường Tiểu học, Trung học cơ sở. 2. Trợ lý thanh niên là chức danh áp dụng cho công chức công tác tại Phòng Giáo dục và Đào tạo các quận, huyện trên địa bàn Thành phố."
+            },
+            {
+                "cid": "129636",
+                "rerank_score": 0.1355,
+                "vector_score": 0.8693,
+                "text_snippet": "Mục đích và yêu cầu của hội thi 1. Mục đích hội thi a) Tuyển chọn, công nhận và tuyên dương giáo viên làm tổng phụ trách Đội đạt danh hiệu giáo viên làm tổng phụ trách Đội giỏi, tạo điều kiện để giáo viên làm tổng phụ trách Đội thể hiện năng lực, học tập, trao đổi kinh nghiệm về công tác Đội và phong trào thiếu nhi trong trường học; b) Góp phần triển khai các phong trào thi đua trong trường học; khuyến khích, động viên, tạo cơ hội cho giáo viên làm tổng phụ trách Đội rèn luyện, tự học và sáng tạo. Qua hội thi, các cơ sở giáo dục và tổ chức Đội phát hiện, tuyên dương và nhân rộng những điển hình tiên tiến, góp phần nâng cao chất lượng giáo dục toàn diện học sinh của mỗi trường, mỗi địa phương và cả nước, thu hút sự quan tâm của các lực lượng xã hội tham gia giáo dục học sinh; c) Hội thi là một trong những căn cứ để đánh giá thực trạng đội ngũ giáo viên làm tổng phụ trách Đội, từ đó xây dựng kế hoạch đào tạo, bồi dưỡng nhằm nâng cao trình độ chuyên môn, nghiệp vụ cho giáo viên làm tổng phụ trách Đội, đáp ứng yêu cầu đổi mới giáo dục, đổi mới công tác Đội và phong trào thiếu nhi. 2. Yêu cầu của hội thi Việc tổ chức hội thi phải đảm bảo tính khách quan, trung thực,"
+            }
+        ]
+    },
+    {
+        "qid": 128481,
+        "question": "Giám đốc tài chính của công ty chứng khoán có thuộc đối tượng áp dụng biện pháp cấm đảm nhiệm chức vụ không?",
+        "ground_truth_cids": [
+            "181410"
+        ],
+        "retrieved_top_k": [
+            {
+                "cid": "181410",
+                "rerank_score": 0.994,
+                "vector_score": 0.8926,
+                "text_snippet": "Các biện pháp phòng ngừa, ngăn chặn vi phạm pháp luật về chứng khoán và thị trường chứng khoán ... 2. Biện pháp cấm đảm nhiệm chức vụ tại công ty chứng khoán, công ty quản lý quỹ đầu tư chứng khoán, chi nhánh công ty chứng khoán và công ty quản lý quỹ nước ngoài tại Việt Nam, công ty đầu tư chứng khoán có thời hạn hoặc vĩnh viễn quy định tại điểm e khoản 1 Điều 7 Luật Chứng khoán được áp dụng đối với các chức danh Chủ tịch Hội đồng quản trị hoặc Chủ tịch Hội đồng thành viên hoặc Chủ tịch công ty, thành viên Hội đồng quản trị hoặc thành viên Hội đồng thành viên, Người đại diện theo pháp luật, Tổng giám đốc (Giám đốc), Phó Tổng giám đốc (Phó giám đốc), Giám đốc tài chính, Kế toán trưởng, Trưởng Ban kiểm soát và thành viên Ban kiểm soát (Kiểm soát viên), thành viên Ban kiểm toán nội bộ và các chức danh quản lý tương đương do Đại hội đồng cổ đông bầu hoặc Hội đồng quản trị hoặc Hội đồng thành viên hoặc Chủ tịch công ty bổ nhiệm. ..."
+            },
+            {
+                "cid": "205380",
+                "rerank_score": 0.8084,
+                "vector_score": 0.8767,
+                "text_snippet": "Các biện pháp phòng ngừa, ngăn chặn vi phạm pháp luật về chứng khoán và thị trường chứng khoán ... 5. Tổ chức, cá nhân bị xử phạt vi phạm hành chính do thực hiện hành vi bị nghiêm cấm trong hoạt động về chứng khoán và thị trường chứng khoán quy định tại Điều 12 Luật Chứng khoán thì bị cấm thực hiện một hoặc một số hoạt động về chứng khoán và thị trường chứng khoán có thời hạn từ 02 năm đến tối đa 03 năm, bị cấm đảm nhiệm chức vụ tại công ty chứng khoán, công ty quản lý quỹ đầu tư chứng khoán, chi nhánh công ty chứng khoán và công ty quản lý quỹ nước ngoài tại Việt Nam, công ty đầu tư chứng khoán có thời hạn từ 02 năm đến tối đa 03 năm. Tổ chức, cá nhân đã bị xử phạt vi phạm hành chính do thực hiện hành vi bị nghiêm cấm trong hoạt động về chứng khoán và thị trường chứng khoán quy định tại Điều 12 Luật Chứng khoán mà tái phạm, vi phạm từ 02 lần trở lên hoặc bị truy cứu trách nhiệm hình sự về một trong các tội danh về chứng khoán được quy định tại Bộ luật Hình sự thì bị cấm thực hiện một hoặc một số hoạt động về chứng khoán và thị trường chứng khoán có thời hạn từ 03 năm đến tối đa 05 năm, bị cấm đảm nhiệm chức vụ tại công ty"
+            },
+            {
+                "cid": "205380",
+                "rerank_score": 0.4277,
+                "vector_score": 0.8753,
+                "text_snippet": "một số hoạt động về chứng khoán và thị trường chứng khoán có thời hạn từ 03 năm đến tối đa 05 năm, bị cấm đảm nhiệm chức vụ tại công ty chứng khoán, công ty quản lý quỹ đầu tư chứng khoán, chi nhánh công ty chứng khoán và công ty quản lý quỹ nước ngoài tại Việt Nam, công ty đầu tư chứng khoán có thời hạn từ 03 năm đến tối đa 05 năm. 6. Tổ chức, cá nhân đã bị truy cứu trách nhiệm hình sự về một trong các tội danh về chứng khoán được quy định tại Bộ luật Hình sự mà tiếp tục thực hiện hành vi bị nghiêm cấm trong hoạt động về chứng khoán và thị trường chứng khoán quy định tại Điều 12 Luật Chứng khoán thì bị cấm tham gia một hoặc một số hoạt động về chứng khoán và thị trường chứng khoán vĩnh viễn, bị cấm đảm nhiệm chức vụ tại công ty chứng khoán, công ty quản lý quỹ đầu tư chứng khoán, chi nhánh công ty chứng khoán và công ty quản lý quỹ nước ngoài tại Việt Nam, công ty đầu tư chứng khoán vĩnh viễn."
+            },
+            {
+                "cid": "46905",
+                "rerank_score": 0.0725,
+                "vector_score": 0.8706,
+                "text_snippet": "nhiệm chức danh quản lý của người không được quyền quản lý doanh nghiệp đối với hành vi vi phạm quy định tại Điểm b Khoản 1 Điều này; c) Buộc miễn nhiệm chức danh Giám đốc (Tổng Giám đốc) công ty cổ phần đối với người không đủ tiêu chuẩn và điều kiện đối với hành vi vi phạm quy định tại Điểm c Khoản 1 Điều này; d) Buộc cấp giấy chứng nhận phần vốn góp cho thành viên theo quy định đối với hành vi vi phạm quy định tại Điểm a Khoản 2 Điều này; đ) Buộc lập sổ đăng ký thành viên, sổ đăng ký cổ đông theo quy định đối với hành vi vi phạm quy định tại Điểm b Khoản 2 Điều này; e) Buộc gắn tên doanh nghiệp tại trụ sở chính, chi nhánh, văn phòng đại diện của doanh nghiệp, viết hoặc gắn tên chi nhánh, văn phòng đại diện, địa điểm kinh doanh đối với hành vi vi phạm tương ứng quy định tại Điểm c Khoản 2 Điều này; g) Buộc lưu giữ tài liệu theo quy định đối với hành vi vi phạm quy định tại Điểm d Khoản 2 Điều này."
+            },
+            {
+                "cid": "48890",
+                "rerank_score": 0.0379,
+                "vector_score": 0.8843,
+                "text_snippet": "viên có chứng chỉ hành nghề chứng khoán phù hợp cho mỗi nghiệp vụ kinh doanh chứng khoán đề nghị cấp phép và tối thiểu 01 nhân viên kiểm soát tuân thủ. Tổng giám đốc (Giám đốc) phải đáp ứng các tiêu chuẩn sau đây: a) Không thuộc trường hợp đang bị truy cứu trách nhiệm hình sự hoặc chấp hành án phạt tù hoặc bị cấm hành nghề chứng khoán theo quy định của pháp luật; b) Có tối thiểu 02 năm kinh nghiệm làm việc tại bộ phận nghiệp vụ của các tổ chức trong lĩnh vực tài chính, chứng khoán, ngân hàng, bảo hiểm hoặc tại bộ phận tài chính, kế toán, đầu tư trong các doanh nghiệp khác; c) Có chứng chỉ hành nghề phân tích tài chính hoặc chứng chỉ hành nghề quản lý quỹ; d) Không bị xử phạt vi phạm hành chính trong lĩnh vực chứng khoán và thị trường chứng khoán trong thời hạn 06 tháng gần nhất tính đến thời điểm nộp hồ sơ. Trường hợp có Phó Tổng giám đốc (Phó Giám đốc) phụ trách nghiệp vụ thì phải đáp ứng các tiêu chuẩn quy định tại các điểm a, b và d khoản này và có chứng chỉ hành nghề chứng khoán phù hợp với nghiệp vụ phụ trách. 6. Dự thảo Điều lệ phù hợp với quy định tại khoản 1 Điều 80 của Luật này.\""
+            }
+        ]
+    },
+    {
+        "qid": 84487,
+        "question": "Sau ly hôn, ai là người được trực tiếp trông nom, chăm sóc, nuôi dưỡng, giáo dục con?",
+        "ground_truth_cids": [
+            "47642"
+        ],
+        "retrieved_top_k": [
+            {
+                "cid": "47642",
+                "rerank_score": 0.999,
+                "vector_score": 0.9055,
+                "text_snippet": "\"Điều 81. Việc trông nom, chăm sóc, nuôi dưỡng, giáo dục con sau khi ly hôn 1. Sau khi ly hôn, cha mẹ vẫn có quyền, nghĩa vụ trông nom, chăm sóc, nuôi dưỡng, giáo dục con chưa thành niên, con đã thành niên mất năng lực hành vi dân sự hoặc không có khả năng lao động và không có tài sản để tự nuôi mình theo quy định của Luật này, Bộ luật dân sự và các luật khác có liên quan. 2. Vợ, chồng thỏa thuận về người trực tiếp nuôi con, nghĩa vụ, quyền của mỗi bên sau khi ly hôn đối với con; trường hợp không thỏa thuận được thì Tòa án quyết định giao con cho một bên trực tiếp nuôi căn cứ vào quyền lợi về mọi mặt của con; nếu con từ đủ 07 tuổi trở lên thì phải xem xét nguyện vọng của con. 3. Con dưới 36 tháng tuổi được giao cho mẹ trực tiếp nuôi, trừ trường hợp người mẹ không đủ điều kiện để trực tiếp trông nom, chăm sóc, nuôi dưỡng, giáo dục con hoặc cha mẹ có thỏa thuận khác phù hợp với lợi ích của con.\""
+            },
+            {
+                "cid": "47643",
+                "rerank_score": 0.9969,
+                "vector_score": 0.8785,
+                "text_snippet": "\"Điều 82. Nghĩa vụ, quyền của cha, mẹ không trực tiếp nuôi con sau khi ly hôn 1. Cha, mẹ không trực tiếp nuôi con có nghĩa vụ tôn trọng quyền của con được sống chung với người trực tiếp nuôi. 2. Cha, mẹ không trực tiếp nuôi con có nghĩa vụ cấp dưỡng cho con. 3. Sau khi ly hôn, người không trực tiếp nuôi con có quyền, nghĩa vụ thăm nom con mà không ai được cản trở. Cha, mẹ không trực tiếp nuôi con lạm dụng việc thăm nom để cản trở hoặc gây ảnh hưởng xấu đến việc trông nom, chăm sóc, nuôi dưỡng, giáo dục con thì người trực tiếp nuôi con có quyền yêu cầu Tòa án hạn chế quyền thăm nom con của người đó. Điều 83. Nghĩa vụ, quyền của cha, mẹ trực tiếp nuôi con đối với người không trực tiếp nuôi con sau khi ly hôn 1. Cha, mẹ trực tiếp nuôi con có quyền yêu cầu người không trực tiếp nuôi con thực hiện các nghĩa vụ theo quy định tại Điều 82 của Luật này; yêu cầu người không trực tiếp nuôi con cùng các thành viên gia đình tôn trọng quyền được nuôi con của mình. 2. Cha, mẹ trực tiếp nuôi con cùng các thành viên gia đình không được cản trở người không trực tiếp nuôi con trong việc thăm nom, chăm sóc, nuôi dưỡng, giáo dục con.\""
+            },
+            {
+                "cid": "161737",
+                "rerank_score": 0.9943,
+                "vector_score": 0.8956,
+                "text_snippet": "\"Điều 81. Việc trông nom, chăm sóc, nuôi dưỡng, giáo dục con sau khi ly hôn ... 3. Con dưới 36 tháng tuổi được giao cho mẹ trực tiếp nuôi, trừ trường hợp người mẹ không đủ điều kiện để trực tiếp trông nom, chăm sóc, nuôi dưỡng, giáo dục con hoặc cha mẹ có thỏa thuận khác phù hợp với lợi ích của con.\""
+            },
+            {
+                "cid": "47644",
+                "rerank_score": 0.988,
+                "vector_score": 0.8854,
+                "text_snippet": "\"Điều 83. Nghĩa vụ, quyền của cha, mẹ trực tiếp nuôi con đối với người không trực tiếp nuôi con sau khi ly hôn 1. Cha, mẹ trực tiếp nuôi con có quyền yêu cầu người không trực tiếp nuôi con thực hiện các nghĩa vụ theo quy định tại Điều 82 của Luật này; yêu cầu người không trực tiếp nuôi con cùng các thành viên gia đình tôn trọng quyền được nuôi con của mình. 2. Cha, mẹ trực tiếp nuôi con cùng các thành viên gia đình không được cản trở người không trực tiếp nuôi con trong việc thăm nom, chăm sóc, nuôi dưỡng, giáo dục con.\""
+            },
+            {
+                "cid": "118764",
+                "rerank_score": 0.9712,
+                "vector_score": 0.8794,
+                "text_snippet": "“Điều 82. Nghĩa vụ, quyền của cha, mẹ không trực tiếp nuôi con sau khi ly hôn ... 2. Cha, mẹ không trực tiếp nuôi con có nghĩa vụ cấp dưỡng cho con.”"
+            }
+        ]
+    },
+    {
+        "qid": 39801,
+        "question": "Anh trai ruột kết hôn thì có được nghỉ hưởng nguyên lương hay không? Trường hợp nào người lao động được nghỉ việc riêng mà vẫn hưởng nguyên lương?",
+        "ground_truth_cids": [
+            "62779"
+        ],
+        "retrieved_top_k": [
+            {
+                "cid": "210413",
+                "rerank_score": 0.9996,
+                "vector_score": 0.8999,
+                "text_snippet": "Nghỉ việc riêng, nghỉ không hưởng lương 1. Người lao động được nghỉ làm việc, hưởng nguyên lương những ngày lễ, tết theo quy định của Bộ luật Lao động và thông báo hàng năm của BHTGVN. 2. Người lao động được nghỉ việc riêng mà vẫn hưởng nguyên lương trong những trường hợp sau: a) Kết hôn: nghỉ 03 ngày; b) Con kết hôn: nghỉ 01 ngày; c) Bố đẻ, mẹ đẻ, bố vợ, mẹ vợ hoặc bố chồng, mẹ chồng chết; vợ chết hoặc chồng chết; con chết: nghỉ 03 ngày. 3. Người lao động được nghỉ không hưởng lương 01 ngày và phải thông báo với người sử dụng lao động khi ông nội, bà nội, ông ngoại, bà ngoại, anh, chị, em ruột chết; bố hoặc mẹ kết hôn; anh, chị, em ruột kết hôn. Khi nghỉ việc theo quy định tại Khoản 2, 3 Điều này, người lao động có trách nhiệm làm đơn xin nghỉ và thông báo cho người quản lý lao động trực tiếp biết để bố trí lao động thay thế. 4 . Người lao động được nghỉ ốm đau, thai sản, tai nạn lao động, nghỉ dưỡng sức phục hồi sức khỏe theo quy định của Bộ luật Lao động và Luật Bảo hiểm xã hội. ..."
+            },
+            {
+                "cid": "62779",
+                "rerank_score": 0.9995,
+                "vector_score": 0.9,
+                "text_snippet": "\"Điều 115. Nghỉ việc riêng, nghỉ không hưởng lương 1. Người lao động được nghỉ việc riêng mà vẫn hưởng nguyên lương và phải thông báo với người sử dụng lao động trong trường hợp sau đây: a) Kết hôn: nghỉ 03 ngày; b) Con đẻ, con nuôi kết hôn: nghỉ 01 ngày; c) Cha đẻ, mẹ đẻ, cha nuôi, mẹ nuôi; cha đẻ, mẹ đẻ, cha nuôi, mẹ nuôi của vợ hoặc chồng; vợ hoặc chồng; con đẻ, con nuôi chết: nghỉ 03 ngày. 2. Người lao động được nghỉ không hưởng lương 01 ngày và phải thông báo với người sử dụng lao động khi ông nội, bà nội, ông ngoại, bà ngoại, anh, chị, em ruột chết; cha hoặc mẹ kết hôn; anh, chị, em ruột kết hônvnghỉ không hưởng lương 01 ngày và phải thông báo với người sử dụng lao động 3. Ngoài quy định tại khoản 1 và khoản 2 Điều này, người lao động có thể thỏa thuận với người sử dụng lao động để nghỉ không hưởng lương.\""
+            },
+            {
+                "cid": "82750",
+                "rerank_score": 0.7766,
+                "vector_score": 0.8783,
+                "text_snippet": "\"Theo quy định tại Điều 74 và 76 của Bộ luật Lao động, người lao động có 12 tháng làm việc thì được nghỉ hàng năm và hưởng nguyên lương. Người sử dụng lao động phải bảo đảm quyền lợi này cho người lao động và được quyền quy định lịch nghỉ hàng năm sau khi tham khảo ý kiến của Ban Chấp hành công đoàn cơ sở và phải thông báo trước cho mọi người trong doanh nghiệp. Người lao động được nghỉ hàng năm theo lịch nghỉ do người sử dụng lao động đã quy định. Trường hợp người lao động chưa nghỉ hàng năm hoặc chưa nghỉ hết số ngày nghỉ hàng năm do người sử dụng lao động không bố trí được (theo lịch nghỉ đã quy định) và yêu cầu người lao động đi làm thêm vào những ngày nghỉ này thì được trả lương ít nhất bằng 300% đơn giá tiền lương hoặc tiền lương thực trả của công việc đang làm theo quy định tại Điều 61 của Bộ luật Lao động và điểm c, khoản 3, điều 10 Nghị định số 114/2002/NĐ-CP ngày 31/12/2002 của Chính phủ. Trường hợp người sử dụng lao động đã bố trí lịch nghỉ hàng năm nhưng người lao động có yêu cầu và tự nguyện đi làm vào những ngày này thì ngoài tiền lương trả cho ngày nghỉ có hưởng lương, người sử dụng lao động chỉ phải trả nguyên lương cho những ngày làm việc đó (100% đơn giá tiền"
+            },
+            {
+                "cid": "212810",
+                "rerank_score": 0.7634,
+                "vector_score": 0.885,
+                "text_snippet": "Nghỉ việc riêng, nghỉ không hưởng lương ... 4 . Người lao động được nghỉ ốm đau, thai sản, tai nạn lao động, nghỉ dưỡng sức phục hồi sức khỏe theo quy định của Bộ luật Lao động và Luật Bảo hiểm xã hội. 5. Trong trường hợp cần phải giải quyết việc riêng hoặc vì lý do sức khỏe, đi học tự túc trong giờ làm việc không do cơ quan cử, người lao động làm đơn gửi cấp có thẩm quyền xin nghỉ việc riêng không hưởng lương. Người lao động chỉ được nghỉ khi được sự chấp thuận của người có thẩm quyền. 6. Căn cứ vào tình hình thực tế của đơn vị, khả năng bố trí, sắp xếp, điều chỉnh công việc, sau khi có ý kiến của người quản lý lao động trực tiếp, người sử dụng lao động xem xét, quyết định cho người lao động nghỉ việc không hưởng lương. 7. Thời gian nghỉ việc không hưởng lương không được tính vào thời gian làm việc để xét nâng lương, xét thi đua - khen thưởng và các khoản phúc lợi liên quan khác. 8. Quy định về thời gian nghỉ việc không hưởng lương và các chế độ, chính sách có liên quan thực hiện theo quy định của pháp luật và BHTGVN."
+            },
+            {
+                "cid": "64541",
+                "rerank_score": 0.7103,
+                "vector_score": 0.8721,
+                "text_snippet": "Điều 113. Nghỉ hằng năm 1. Người lao động làm việc đủ 12 tháng cho một người sử dụng lao động thì được nghỉ hằng năm, hưởng nguyên lương theo hợp đồng lao động như sau: a) 12 ngày làm việc đối với người làm công việc trong điều kiện bình thường; b) 14 ngày làm việc đối với người lao động chưa thành niên, lao động là người khuyết tật, người làm nghề, công việc nặng nhọc, độc hại, nguy hiểm; c) 16 ngày làm việc đối với người làm nghề, công việc đặc biệt nặng nhọc, độc hại, nguy hiểm. 2. Người lao động làm việc chưa đủ 12 tháng cho một người sử dụng lao động thì số ngày nghỉ hằng năm theo tỷ lệ tương ứng với số tháng làm việc. 3. Trường hợp do thôi việc, bị mất việc làm mà chưa nghỉ hằng năm hoặc chưa nghỉ hết số ngày nghỉ hằng năm thì được người sử dụng lao động thanh toán tiền lương cho những ngày chưa nghỉ. 4. Người sử dụng lao động có trách nhiệm quy định lịch nghỉ hằng năm sau khi tham khảo ý kiến của người lao động và phải thông báo trước cho người lao động biết. Người lao động có thể thỏa thuận với người sử dụng lao động để nghỉ hằng năm thành nhiều lần hoặc nghỉ gộp tối đa 03 năm một lần. 5. Khi nghỉ hằng năm mà chưa đến kỳ trả lương, người lao động được tạm ứng"
+            }
+        ]
+    },
+    {
+        "qid": 139270,
+        "question": "Bộ phận giúp việc Ban Chỉ đạo liên ngành hội nhập quốc tế về chính trị, an ninh quốc phòng được đặt tại đâu?",
+        "ground_truth_cids": [
+            "217412"
+        ],
+        "retrieved_top_k": [
+            {
+                "cid": "217412",
+                "rerank_score": 0.9965,
+                "vector_score": 0.8856,
+                "text_snippet": "Tổ chức bộ máy giúp việc của Ban Chỉ đạo liên ngành 1. Ban Chỉ đạo liên ngành có Bộ phận giúp việc Ban Chỉ đạo liên ngành (sau đây gọi tắt là Bộ phận giúp việc) đặt tại Bộ Ngoại giao; hoạt động theo chế độ kiêm nhiệm. 2. Bộ phận giúp việc bao gồm: - Trưởng Bộ phận giúp việc: Vụ trưởng Vụ Chính sách đối ngoại, Bộ Ngoại giao; - Phó Trưởng Bộ phận giúp việc: Phó Vụ trưởng Vụ Chính sách đối ngoại, Bộ Ngoại giao; - Các Thành viên: Công chức các đơn vị thuộc Bộ Ngoại giao, do Bộ trưởng Bộ Ngoại giao quyết định. 3. Trưởng Bộ phận giúp việc phân công nhiệm vụ giữa các thành viên, điều phối, tổ chức hoạt động của Bộ phận giúp việc để thực hiện các chức năng, nhiệm vụ được giao. Các thành viên Bộ phận giúp việc có trách nhiệm phối hợp chặt chẽ thực hiện các nhiệm vụ của Bộ phận giúp việc được quy định tại Điều 8 của Quy chế này."
+            },
+            {
+                "cid": "153446",
+                "rerank_score": 0.9942,
+                "vector_score": 0.8805,
+                "text_snippet": "về hội nhập quốc tế; + Thay mặt Trưởng Ban Chỉ đạo quốc gia điều phối, phối hợp thực hiện nhiệm vụ giữa các Ban Chỉ đạo liên ngành và giữa các Ủy viên Ban Chỉ đạo quốc gia; + Sử dụng các đơn vị chức năng hiện có của mình để giúp việc cho hoạt động của Ban Chỉ đạo quốc gia. - Bộ trưởng Bộ Ngoại giao: + Giúp Trưởng Ban Chỉ đạo liên ngành hội nhập quốc tế về chính trị, an ninh, quốc phòng xây dựng chương trình, kế hoạch công tác của Ban Chỉ đạo liên ngành hội nhập quốc tế về chính trị, an ninh, quốc phòng và tổ chức thực hiện sau khi được phê duyệt; + Giúp Trưởng Ban Chỉ đạo liên ngành hội nhập quốc tế về chính trị, an ninh, quốc phòng điều phối, phối hợp, đôn đốc các thành viên trong việc triển khai thực hiện các nhiệm vụ của Ban Chỉ đạo liên ngành hội nhập quốc tế về chính trị, an ninh, quốc phòng; + Là đầu mối phối hợp giữa Ban Chỉ đạo liên ngành hội nhập quốc tế về chính trị, an ninh, quốc phòng với các Ban Chỉ đạo liên ngành khác trong việc thực hiện các nhiệm vụ của Ban Chỉ đạo quốc gia; + Sử dụng các đơn vị chức năng hiện có của mình để giúp việc cho hoạt động của Ban Chỉ đạo liên ngành hội nhập quốc tế về chính trị, an ninh, quốc phòng."
+            },
+            {
+                "cid": "192883",
+                "rerank_score": 0.9807,
+                "vector_score": 0.8691,
+                "text_snippet": "Tổ chức bộ máy giúp việc của Ban Chỉ đạo 1. Ban Chỉ đạo liên ngành có Bộ phận giúp việc Ban Chỉ đạo liên ngành (sau đây gọi tắt là Bộ phận giúp việc) đặt tại Bộ Lao động - Thương binh và Xã hội; hoạt động theo chế độ kiêm nhiệm. 2. Bộ phận giúp việc bao gồm: - Trưởng Bộ phận giúp việc: Vụ trưởng Vụ Hợp tác quốc tế, Bộ Lao động - Thương binh và Xã hội; - Phó Trưởng Bộ phận giúp việc: Phó Vụ trưởng Vụ Hợp tác quốc tế, Bộ Lao động - Thương binh và Xã hội; - Các thành viên: Cán bộ, công chức thuộc Bộ Lao động - Thương binh và Xã hội; - Trưởng Bộ phận giúp việc phân công nhiệm vụ giữa các thành viên, điều phối, tổ chức hoạt động của Bộ phận giúp việc để thực hiện các chức năng, nhiệm vụ được giao. Các thành viên Bộ phận giúp việc có trách nhiệm phối hợp chặt chẽ thực hiện các nhiệm vụ của Bộ phận giúp việc được quy định tại Điều 9 của Quy chế này. 3. Tổ công tác liên ngành bao gồm đại diện các đơn vị chức năng của các Bộ: Giáo dục và Đào tạo, Khoa học và Công nghệ, Văn hóa, Thể thao và Du lịch, Lao động - Thương binh và Xã hội, Văn phòng Chính phủ. Phó Trưởng Ban Chỉ đạo liên ngành quyết định danh sách Tổ công tác liên ngành"
+            },
+            {
+                "cid": "153446",
+                "rerank_score": 0.9806,
+                "vector_score": 0.8597,
+                "text_snippet": "các đơn vị chức năng hiện có của mình để giúp việc cho hoạt động của Ban Chỉ đạo liên ngành hội nhập quốc tế về chính trị, an ninh, quốc phòng. - Bộ trưởng Bộ Công thương: + Giúp Trưởng Ban Chỉ đạo liên ngành hội nhập quốc tế về kinh tế xây dựng chương trình, kế hoạch công tác của Ban Chỉ đạo liên ngành hội nhập quốc tế về kinh tế và tổ chức thực hiện sau khi được phê duyệt; + Giúp Trưởng Ban Chỉ đạo liên ngành hội nhập quốc tế về kinh tế điều phối, phối hợp, đôn đốc các thành viên trong việc triển khai thực hiện các nhiệm vụ của Ban Chỉ đạo liên ngành hội nhập quốc tế về kinh tế; + Là đầu mối phối hợp giữa Ban Chỉ đạo liên ngành hội nhập quốc tế về kinh tế với các Ban Chỉ đạo liên ngành khác trong việc thực hiện các nhiệm vụ của Ban Chỉ đạo quốc gia; + Sử dụng các đơn vị chức năng hiện có của mình để giúp việc cho hoạt động của Ban Chỉ đạo liên ngành hội nhập quốc tế về kinh tế. - Bộ trưởng Bộ Lao động – Thương binh và Xã hội: + Giúp Trưởng Ban Chỉ đạo liên ngành hội nhập quốc tế về văn hóa, xã hội, khoa học, công nghệ và giáo dục, đào tạo xây dựng chương trình, kế hoạch công tác của Ban Chỉ đạo liên ngành hội nhập quốc"
+            },
+            {
+                "cid": "225409",
+                "rerank_score": 0.9748,
+                "vector_score": 0.8837,
+                "text_snippet": "Bộ phận giúp việc Ban Chỉ đạo quốc gia 1. Bộ phận giúp việc Ban Chỉ đạo quốc gia đặt tại Văn phòng Chính phủ, trên cơ sở sử dụng bộ máy hiện có, không thành lập thêm tổ chức và không thêm biên chế. …"
+            }
+        ]
+    },
+    {
+        "qid": 129901,
+        "question": "Đề nghị tòa án hủy việc kết hôn trái pháp luật có thuộc thẩm quyền của Ủy ban nhân dân cấp huyện không?",
+        "ground_truth_cids": [
+            "47571"
+        ],
+        "retrieved_top_k": [
+            {
+                "cid": "909",
+                "rerank_score": 0.9083,
+                "vector_score": 0.8755,
+                "text_snippet": "1. Khi xem xét, giải quyết yêu cầu có liên quan đến việc hủy kết hôn trái pháp luật, Tòa án phải căn cứ vào yêu cầu của đương sự và điều kiện kết hôn, điều kiện công nhận quan hệ hôn nhân quy định tại Điều 8 và Điều 11 của Luật hôn nhân và gia đình để quyết định. 2. Trường hợp tại thời điểm kết hôn, hai bên kết hôn không có đủ điều kiện kết hôn nhưng sau đó có đủ điều kiện kết hôn quy định tại Điều 8 của Luật hôn nhân và gia đình thì Tòa án xử lý như sau: a) Nếu hai bên kết hôn cùng yêu cầu Tòa án công nhận quan hệ hôn nhân thì Tòa án quyết định công nhận quan hệ hôn nhân đó kể từ thời điểm các bên kết hôn có đủ điều kiện kết hôn. Ví dụ 1: Anh A sinh ngày 25-01-1996, chị B sinh ngày 10-01-1995. Ngày 08-01-2015, anh A và chị B đăng ký kết hôn. Ngày 25-9-2016, Tòa án mở phiên họp giải quyết yêu cầu hủy việc kết hôn trái pháp luật. Tại phiên họp, anh A và chị B đều yêu cầu công nhận quan hệ hôn nhân, nếu xét thấy đã đủ các điều kiện kết hôn khác thì Tòa án xem xét công nhận quan hệ hôn nhân của anh A và chị B kể từ thời điểm cả anh A và chị B đủ tuổi kết hôn, tức là kể từ"
+            },
+            {
+                "cid": "47571",
+                "rerank_score": 0.8896,
+                "vector_score": 0.8824,
+                "text_snippet": "\"Điều 10. Người có quyền yêu cầu hủy việc kết hôn trái pháp luật 1. Người bị cưỡng ép kết hôn, bị lừa dối kết hôn, theo quy định của pháp luật về tố tụng dân sự, có quyền tự mình yêu cầu hoặc đề nghị cá nhân, tổ chức quy định tại khoản 2 Điều này yêu cầu Tòa án hủy việc kết hôn trái pháp luật do việc kết hôn vi phạm quy định tại điểm b khoản 1 Điều 8 của Luật này. 2. Cá nhân, cơ quan, tổ chức sau đây, theo quy định của pháp luật về tố tụng dân sự, có quyền yêu cầu Tòa án hủy việc kết hôn trái pháp luật do việc kết hôn vi phạm quy định tại các điểm a, c và d khoản 1 Điều 8 của Luật này: a) Vợ, chồng của người đang có vợ, có chồng mà kết hôn với người khác; cha, mẹ, con, người giám hộ hoặc người đại diện theo pháp luật khác của người kết hôn trái pháp luật; b) Cơ quan quản lý nhà nước về gia đình; c) Cơ quan quản lý nhà nước về trẻ em; d) Hội liên hiệp phụ nữ. 3. Cá nhân, cơ quan, tổ chức khác khi phát hiện việc kết hôn trái pháp luật thì có quyền đề nghị cơ quan, tổ chức quy định tại các điểm b, c và d khoản 2 Điều này yêu cầu Tòa án hủy việc kết hôn trái pháp luật.\""
+            },
+            {
+                "cid": "88485",
+                "rerank_score": 0.854,
+                "vector_score": 0.877,
+                "text_snippet": "\"Điều 29. Những yêu cầu về hôn nhân và gia đình thuộc thẩm quyền giải quyết của Tòa án 1. Yêu cầu hủy việc kết hôn trái pháp luật. 2. Yêu cầu công nhận thuận tình ly hôn, thỏa thuận nuôi con, chia tài sản khi ly hôn.\""
+            },
+            {
+                "cid": "909",
+                "rerank_score": 0.8272,
+                "vector_score": 0.875,
+                "text_snippet": "hợp này, quyền, nghĩa vụ của cha, mẹ, con từ thời điểm kết hôn đến thời điểm ly hôn được giải quyết theo quy định về quyền, nghĩa vụ của cha, mẹ, con khi ly hôn; quan hệ tài sản, nghĩa vụ và hợp đồng giữa các bên từ thời điểm kết hôn đến trước thời điểm đủ điều kiện kết hôn được giải quyết theo quy định tại Điều 16 của Luật hôn nhân và gia đình; quan hệ tài sản, nghĩa vụ và hợp đồng giữa các bên từ thời điểm đủ điều kiện kết hôn đến thời điểm ly hôn được giải quyết theo quy định tại Điều 59 của Luật hôn nhân và gia đình. 3. Trường hợp hai bên đã đăng ký kết hôn nhưng tại thời điểm Tòa án giải quyết hai bên kết hôn vẫn không có đủ các điều kiện kết hôn quy định tại Điều 8 của Luật hôn nhân và gia đình thì thực hiện như sau: a) Nếu có yêu cầu hủy việc kết hôn trái pháp luật thì Tòa án quyết định hủy việc kết hôn trái pháp luật; b) Nếu một hoặc cả hai bên yêu cầu ly hôn hoặc yêu cầu công nhận quan hệ hôn nhân thì Tòa án bác yêu cầu của họ và quyết định hủy việc kết hôn trái pháp luật. Trường hợp quyết định theo hướng dẫn tại điểm a và điểm b khoản này thì Tòa án áp dụng quy định tại Điều 12 của Luật"
+            },
+            {
+                "cid": "235085",
+                "rerank_score": 0.8056,
+                "vector_score": 0.8733,
+                "text_snippet": "Xử lý yêu cầu hủy việc kết hôn trái pháp luật ... 2. Trường hợp tại thời điểm kết hôn, hai bên kết hôn không có đủ điều kiện kết hôn nhưng sau đó có đủ điều kiện kết hôn quy định tại Điều 8 của Luật hôn nhân và gia đình thì Tòa án xử lý như sau: .... b) Nếu một hoặc hai bên yêu cầu hủy việc kết hôn trái pháp luật hoặc có một bên yêu cầu công nhận quan hệ hôn nhân hoặc có một bên yêu cầu ly hôn còn bên kia không có yêu cầu thì Tòa án quyết định hủy việc kết hôn trái pháp luật. Trường hợp có đơn khởi kiện, đơn yêu cầu Tòa án giải quyết thì quyền, nghĩa vụ của cha, mẹ, con; quan hệ tài sản, nghĩa vụ và hợp đồng giữa các bên từ thời điểm kết hôn đến thời điểm hủy việc kết hôn trái pháp luật được giải quyết theo quy định tại Điều 12 của Luật hôn nhân và gia đình. c) Trường hợp hai bên cùng yêu cầu Tòa án cho ly hôn hoặc có một bên yêu cầu ly hôn còn bên kia yêu cầu công nhận quan hệ hôn nhân thì Tòa án giải quyết cho ly hôn. Trường hợp này, quyền, nghĩa vụ của cha, mẹ, con từ thời điểm kết hôn đến thời điểm ly hôn được giải quyết theo quy định về quyền, nghĩa vụ của cha, mẹ, con khi ly hôn; quan"
+            }
+        ]
+    },
+    {
+        "qid": 5283,
+        "question": "Cán bộ lãnh đạo xếp loại chất lượng ở mức không hoàn thành nhiệm vụ thì có bị miễn nhiệm không?",
+        "ground_truth_cids": [
+            "31078"
+        ],
+        "retrieved_top_k": [
+            {
+                "cid": "58020",
+                "rerank_score": 0.9946,
+                "vector_score": 0.9035,
+                "text_snippet": "giữ chức vụ lãnh đạo, quản lý có 02 năm liên tiếp được xếp loại chất lượng ở mức không hoàn thành nhiệm vụ thì đơn vị có thẩm quyền xem xét, quyết định miễn nhiệm và cho thôi việc theo quy định. ..."
+            },
+            {
+                "cid": "85464",
+                "rerank_score": 0.9911,
+                "vector_score": 0.8903,
+                "text_snippet": "Miễn nhiệm đối với công chức lãnh đạo, quản lý .... 3. Công chức lãnh đạo, quản lý sau khi bị miễn nhiệm, người đứng đầu cơ quan, tổ chức bố trí công tác phù hợp; công chức có trách nhiệm chấp hành quyết định phân công của cấp có thẩm quyền. Trường hợp công chức bị miễn nhiệm do xếp loại chất lượng ở mức không hoàn thành nhiệm vụ trong hai năm liên tiếp thì cơ quan có thẩm quyền cho thôi việc theo quy định của pháp luật."
+            },
+            {
+                "cid": "138585",
+                "rerank_score": 0.9909,
+                "vector_score": 0.9046,
+                "text_snippet": "có thẩm quyền. Trường hợp miễn nhiệm do xếp loại chất lượng ở mức không hoàn thành nhiệm vụ trong hai năm liên tiếp thì cấp có thẩm quyền giải quyết cho thôi việc theo quy định của pháp luật. ..."
+            },
+            {
+                "cid": "111767",
+                "rerank_score": 0.9904,
+                "vector_score": 0.8767,
+                "text_snippet": "Sử dụng kết quả đánh giá, xếp loại chất lượng ... 5. Công chức giữ chức vụ lãnh đạo, quản lý có 02 năm không liên tiếp trong thời hạn bổ nhiệm được xếp loại chất lượng ở mức không hoàn thành nhiệm vụ thì bố trí công tác khác hoặc không bổ nhiệm lại. 6. Công chức không giữ chức vụ lãnh đạo, quản lý trong 03 năm có 02 năm không liên tiếp được xếp loại chất lượng ở mức không hoàn thành nhiệm vụ ở vị trí việc làm đang đảm nhận thì bố trí vào vị trí việc làm có yêu cầu thấp hơn. 7. Trong 02 năm liên tiếp liền kề tại thời điểm xét tinh giản biên chế, công chức, viên chức có 01 năm được xếp loại chất lượng ở mức hoàn thành nhiệm vụ và 01 năm không hoàn thành nhiệm vụ nhưng không thể bố trí việc làm khác phù hợp hoặc không hoàn thành nhiệm vụ trong năm trước liền kề tại thời điểm xét tinh giản biên chế nhưng cá nhân tự nguyện thực hiện tinh giản biên chế và được cơ quan, đơn vị trực tiếp quản lý đồng ý thì thực hiện tinh giản biên chế trừ các trường hợp chưa xem xét tinh giản biên chế theo quy định của pháp luật."
+            },
+            {
+                "cid": "58020",
+                "rerank_score": 0.9843,
+                "vector_score": 0.8745,
+                "text_snippet": "Sử dụng kết quả đánh giá, xếp loại chất lượng 1. Kết quả đánh giá, xếp loại chất lượng công chức, viên chức là căn cứ để bố trí, sử dụng, đào tạo, bồi dưỡng, nâng ngạch hoặc thăng hạng chức danh nghề nghiệp, quy hoạch, bổ nhiệm, miễn nhiệm, điều động, luân chuyển, biệt phái, khen thưởng, kỷ luật, đánh giá, xếp loại chất lượng đảng viên và thực hiện các chính sách khác đối với công chức, viên chức. Kết quả đánh giá của các năm trước năm 2021 được tính liên tục để áp dụng các quy định có liên quan đối với công chức, viên chức. 2. Công chức có 02 năm liên tiếp được xếp loại chất lượng ở mức không hoàn thành nhiệm vụ thì đơn vị có thẩm quyền giải quyết cho thôi việc trừ các trường hợp không giải quyết cho thôi việc theo quy định của pháp luật. 3. Viên chức có 02 năm liên tiếp được xếp loại chất lượng ở mức không hoàn thành nhiệm vụ thì đơn vị có thẩm quyền quản lý, sử dụng được đơn phương chấm dứt hợp đồng làm việc với viên chức trừ các trường hợp không được đơn phương chấm dứt hợp đồng làm việc theo quy định của pháp luật. 4. Công chức, viên chức giữ chức vụ lãnh đạo, quản lý có 02 năm liên tiếp được xếp loại chất lượng ở mức không hoàn thành nhiệm vụ thì đơn vị có thẩm quyền xem xét,"
+            }
+        ]
+    },
+    {
+        "qid": 110381,
+        "question": "Có thể mở rộng phạm vi hoạt động của quỹ từ thiện hay không?",
+        "ground_truth_cids": [
+            "59947",
+            "185109"
+        ],
+        "retrieved_top_k": [
+            {
+                "cid": "113667",
+                "rerank_score": 0.0534,
+                "vector_score": 0.839,
+                "text_snippet": "Tôn chỉ, mục đích hoạt động 1. Quỹ Chia sẻ tình thương (sau đây gọi tắt là Quỹ) là quỹ xã hội - từ thiện hoạt động không vì lợi nhuận nhằm huy động nguồn lực từ các tổ chức, cá nhân trong và ngoài nước để hỗ trợ, giúp đỡ đối với trẻ em khó khăn, trẻ em mồ côi, người khuyết tật, người già neo đơn, góp phần phát triển cộng đồng bền vững. 2. Quỹ được hình thành từ nguồn đóng góp ban đầu của các sáng lập viên và tự tạo vốn trên cơ sở vận động, quyên góp từ các tổ chức, cá nhân trong và ngoài nước tự nguyện đóng góp tài sản theo quy định của pháp luật."
+            },
+            {
+                "cid": "59947",
+                "rerank_score": 0.0462,
+                "vector_score": 0.8641,
+                "text_snippet": "\"Điều 21. Điều kiện, hồ sơ, trình tự mở rộng phạm vi hoạt động 1. Điều kiện, hồ sơ trình tự mở rộng phạm vi hoạt động của quỹ. Quỹ có nguyện vọng mở rộng phạm vi hoạt động và đảm bảo đủ tài sản đóng góp theo quy định tại Điều 14 Nghị định này thì quỹ gửi 01 bộ hồ sơ gồm: a) Đơn đề nghị mở rộng phạm vi hoạt động; b) Hồ sơ theo quy định tại điểm b, c, khoản 2 Điều 15 Nghị định này. 2. Trong thời hạn 30 ngày làm việc kể từ ngày nhận đủ hồ sơ hợp lệ, cơ quan nhà nước có thẩm quyền quy định tại Điều 18 Nghị định này cấp giấy phép thành lập và công nhận điều lệ quỹ, nếu từ chối phải nêu rõ lý do.\""
+            },
+            {
+                "cid": "109087",
+                "rerank_score": 0.035,
+                "vector_score": 0.8369,
+                "text_snippet": "Tôn chỉ, mục đích của Quỹ 1. Quỹ Tình thương Việt (sau đây gọi tắt là Quỹ) là quỹ từ thiện, hoạt động không vì mục tiêu lợi nhuận trên nguyên tắc tự tạo vốn từ nguồn vốn đóng góp ban đầu của các sáng lập viên, các nguồn vận động tài trợ và đóng góp hoàn toàn tự nguyện của các tổ chức, cá nhân trong và ngoài nước theo quy định của pháp luật. 2. Quỹ hoạt động nhằm mục đích hỗ trợ cộng đồng trong lĩnh vực giáo dục và đào tạo; hỗ trợ các em học sinh, sinh viên trong học tập, tu nghiệp, bồi dưỡng kiến thức để phát triển nguồn nhân lực, nhân tài Việt Nam. Hỗ trợ việc chăm lo sức khỏe cho người dân, đặc biệt là hỗ trợ xây dựng cơ sở vật chất và cung cấp các thiết bị cho bệnh viện, trung tâm y tế và trạm xá ở các vùng còn nhiều khó khăn; nâng cao kiến thức sức khỏe cộng đồng. 3. Quỹ hoạt động theo Hiến pháp, pháp luật nước Cộng hòa xã hội chủ nghĩa Việt Nam và theo Điều lệ Quỹ."
+            },
+            {
+                "cid": "64258",
+                "rerank_score": 0.0109,
+                "vector_score": 0.836,
+                "text_snippet": "Tôn chỉ, mục đích của Quỹ 1. Quỹ Hỗ trợ bệnh nhi Việt Nam (sau đây gọi tắt là Quỹ) là quỹ từ thiện, hoạt động không vì mục tiêu lợi nhuận trên nguyên tắc tự tạo vốn từ nguồn vốn đóng góp ban đầu của các sáng lập viên, các nguồn vận động tài trợ và đóng góp hoàn toàn tự nguyện của các tổ chức, cá nhân trong và ngoài nước theo quy định của pháp luật. 2. Quỹ hoạt động nhằm mục đích từ thiện, hỗ trợ, giúp đỡ những bệnh nhi có hoàn cảnh khó khăn mắc bệnh hiểm nghèo, giúp các em vượt qua bệnh tật để sống vui, sống khỏe. Từ đó góp phần nâng cao nhận thức, trách nhiệm của cộng đồng, xã hội trong sự nghiệp bảo vệ, chăm sóc sức khỏe cho trẻ em."
+            },
+            {
+                "cid": "81850",
+                "rerank_score": 0.0101,
+                "vector_score": 0.8362,
+                "text_snippet": "Giải thích từ ngữ Trong Nghị định này, các từ ngữ dưới đây được hiểu như sau: … 3. Quỹ từ thiện là quỹ được tổ chức, hoạt động với mục đích hỗ trợ khắc phục sự cố do thiên tai, hỏa hoạn, dịch bệnh, tai nạn và các đối tượng khác thuộc diện khó khăn, yếu thế cần sự trợ giúp của xã hội, không vì mục tiêu lợi nhuận. 4. Không vì mục tiêu lợi nhuận: Là lợi nhuận có được trong quá trình hoạt động không để phân chia mà chỉ dùng cho các hoạt động theo điều lệ của quỹ đã được công nhận."
+            }
+        ]
+    },
+    {
+        "qid": 174369,
+        "question": "Ban thường vụ Liên đoàn Bóng chày và Bóng mềm Việt Nam mỗi năm họp bao nhiêu lần?",
+        "ground_truth_cids": [
+            "69359"
+        ],
+        "retrieved_top_k": [
+            {
+                "cid": "189682",
+                "rerank_score": 0.8008,
+                "vector_score": 0.842,
+                "text_snippet": "Ban Thường vụ ... 3. Nguyên tắc hoạt động của Ban Thường vụ: a) Ban Thường vụ hoạt động theo Quy chế do Ban Chấp hành ban hành, tuân thủ quy định của pháp luật và Điều lệ Hội; b) Ban Thường vụ họp ít nhất một năm hai lần, khi cần thiết có thể họp bất thường theo đề nghị của Chủ tịch hoặc Tổng thư ký. Trong trường hợp đặc biệt, có lý do chính đáng các thành viên Ban Chấp hành không trực tiếp đến dự họp được có thể tham gia cuộc họp thông qua điện thoại hoặc internet trực tuyến; c) Các cuộc họp của Ban Thường vụ là hợp lệ khi có trên 1/2 (một phần hai) tổng số ủy viên tham gia dự họp. Ban Thường vụ có thể biểu quyết bằng hình thức giơ tay hoặc bỏ phiếu kín. Việc quy định hình thức biểu quyết do Ban Thường vụ quyết định; d) Các nghị quyết, quyết định của Ban Thường vụ được thông qua khi có trên 1/2 (một phần hai) tổng số ủy viên Ban Thường vụ tham gia biểu quyết tán thành."
+            },
+            {
+                "cid": "243429",
+                "rerank_score": 0.7238,
+                "vector_score": 0.8632,
+                "text_snippet": "Ban Thường vụ Liên đoàn 1. Ban Thường vụ Liên đoàn do Ban Chấp hành Liên đoàn bầu theo nguyên tắc bầu cử bỏ phiếu kín hoặc biểu quyết giơ tay. Số lượng Ủy viên do Đại hội đại biểu quy định, nhiệm kì 4 năm. Ban Thường vụ 6 tháng họp 1 lần. Các cuộc họp bất thường có thể được triệu tập theo yêu cầu của Chủ tịch Liên đoàn. 2. Việc bổ sung ủy viên Ban Thường vụ trong trường hợp chưa đủ số lượng quy định phải do Ban Chấp hành biểu quyết với trên 1/2 số phiếu tán thành."
+            },
+            {
+                "cid": "176646",
+                "rerank_score": 0.6326,
+                "vector_score": 0.8418,
+                "text_snippet": "Ban Thường vụ Hội ... 3. Nguyên tắc làm việc của Ban Thường vụ Hội: a) Ban Thường vụ hoạt động theo Quy chế do Ban Chấp hành ban hành, tuân thủ quy định của pháp luật và Điều lệ Hội; b) Ban Thường vụ họp định kỳ mỗi năm 02 (hai) lần. Khi cần thiết, Ban Thường vụ có thể họp bất thường theo đề nghị của Chủ tịch Hội hoặc trên 1/2 (một phần hai) tổng số ủy viên Thường vụ để giải quyết các công việc quan trọng cấp bách, phát sinh; c) Các cuộc họp của Ban Thường vụ được coi là hợp lệ khi có ít nhất trên 1/2 (một phần hai) số ủy viên Thường vụ tham dự cuộc họp tán thành. Việc quy định hình thức biểu quyết tại cuộc họp bằng giơ tay hoặc bỏ phiếu kín do Ban Thường vụ Hội quyết định; d) Các nghị quyết, quyết định của Ban Thường vụ được thông qua khi có trên 1/2 (một phần hai) tổng số ủy viên Ban Thường vụ dự họp biểu quyết tán thành. Trong trường hợp kết quả biểu quyết ngang nhau thì quyết định thuộc về bên có ý kiến của Chủ tịch Hội hoặc người chủ trì cuộc họp."
+            },
+            {
+                "cid": "173259",
+                "rerank_score": 0.6011,
+                "vector_score": 0.8455,
+                "text_snippet": "Ban Thường vụ ... 3. Nguyên tắc hoạt động của Ban Thường vụ a) Chấp hành và hoạt động theo chủ trương của Đảng, quy định của pháp luật, Điều lệ và quy chế do Ban Chấp hành ban hành; b) Ban Thường vụ họp thường kỳ 03 tháng một lần vào khoảng thời gian cuối mỗi quý; Ban Thường vụ họp bất thường khi có yêu cầu của Thường trực Liên minh Hợp tác xã Việt Nam hoặc trên 1/2 (một phần hai) tổng số Ủy viên Ban Thường vụ. Trường hợp cần thiết, Chủ tịch Liên minh Hợp tác xã Việt Nam gửi văn bản lấy ý kiến của các Ủy viên Ban Thường vụ theo quy chế hoạt động do Ban Chấp hành ban hành; c) Cuộc họp của Ban Thường vụ là hợp lệ khi có trên 1/2 (một phần hai) tổng số Ủy viên Ban Thường vụ dự họp; d) Nghị quyết, quyết định của Ban Thường vụ được thông qua khi có trên 1/2 (một phần hai) tổng số Ủy viên Ban Thường vụ biểu quyết tán thành; hình thức biểu quyết bằng giơ tay hoặc bỏ phiếu kín, do Ban Thường vụ quyết định; trường hợp số Ủy viên Thường vụ biểu quyết tán thành và không tán thành ngang nhau thì quyết định thuộc về bên có ý kiến của Chủ tịch Liên minh Hợp tác xã Việt Nam."
+            },
+            {
+                "cid": "93968",
+                "rerank_score": 0.5926,
+                "vector_score": 0.8468,
+                "text_snippet": "Ban Chấp hành Liên đoàn 1. Ban Chấp hành do Đại hội nhiệm kỳ bầu ra là cơ quan lãnh đạo của Liên đoàn giữa hai kỳ Đại hội. Số lượng ủy viên Ban Chấp hành do Đại hội đại biểu quyết định. Ban Chấp hành họp tối thiểu 01 (một) năm 01 (một) lần. Trong nhiệm kỳ, có thể được bổ sung hoặc thay thế ủy viên Ban Chấp hành theo yêu cầu phát triển của môn bóng bàn nhưng không quá 1/3 (một phần ba) số lượng ủy viên Ban Chấp hành đã được Đại hội quyết định. Việc bổ sung hoặc thay thế ủy viên Ban Chấp hành phải được Ban Chấp hành thông qua tại hội nghị thường niên hoặc hội nghị bất thường bằng hình thức bỏ phiếu hoặc giơ tay. ..."
+            }
+        ]
+    },
+    {
+        "qid": 22947,
+        "question": "Thẻ an toàn vệ sinh lao động trong Bộ Quốc phòng có thời hạn bao nhiêu năm?",
+        "ground_truth_cids": [
+            "87124"
+        ],
+        "retrieved_top_k": [
+            {
+                "cid": "107932",
+                "rerank_score": 0.6159,
+                "vector_score": 0.867,
+                "text_snippet": "\"Điều 25. Thời hạn cấp, cấp mới giấy chứng nhận huấn luyện, thẻ an toàn 1. Giấy chứng nhận huấn luyện, Thẻ an toàn có thời hạn 02 năm. 2. Trong vòng 30 ngày, trước khi Giấy chứng nhận huấn luyện, Thẻ an toàn hết hạn, người sử dụng lao động lập danh sách những người được cấp kèm theo kết quả huấn luyện hoặc giấy tờ chứng minh việc cập nhật kiến thức, kỹ năng về an toàn, vệ sinh lao động theo quy định tại Khoản 1 Điều 21 Nghị định này gửi tổ chức huấn luyện hoặc doanh nghiệp tự huấn luyện theo quy định tại Điều 26 và Điều 29 Nghị định này. Nếu kết quả huấn luyện đạt yêu cầu thì được cấp Giấy chứng nhận huấn luyện, Thẻ an toàn mới theo quy định tại Nghị định này.\""
+            },
+            {
+                "cid": "87124",
+                "rerank_score": 0.0428,
+                "vector_score": 0.8545,
+                "text_snippet": "Thời hạn cấp, cấp Giấy chứng nhận huấn luyện, Thẻ an toàn, Chứng chỉ chứng nhận chuyên môn về y tế lao động 1. Giấy chứng nhận huấn luyện, Thẻ an toàn có thời hạn 02 năm. Chứng chỉ chứng nhận chuyên môn về y tế lao động có thời hạn 05 năm. ..."
+            },
+            {
+                "cid": "155292",
+                "rerank_score": 0.0362,
+                "vector_score": 0.8577,
+                "text_snippet": "Thẩm quyền cấp, thời hạn, mã số Thẻ 1. Bộ trưởng Bộ Lao động - Thương binh và Xã hội cấp Thẻ cho công chức thanh tra chuyên ngành. 2. Thời hạn sử dụng Thẻ là 05 năm kể từ ngày cấp. 3. Mã số thẻ: Mỗi công chức thanh tra chuyên ngành được cấp một mã số thẻ, Mã số thẻ gồm: a) Nhóm ký tự đầu: A09 là mã số của Bộ Lao động - Thương binh và Xã hội; b) Nhóm ký tự tiếp theo là ký hiệu phần chữ viết tắt tên của từng đơn vị: - Cục Quản lý lao động ngoài nước viết tắt là: QLLĐNN; - Tổng cục Giáo dục nghề nghiệp viết tắt là: TCGDNN; - Cục An toàn lao động viết tắt là: ATLĐ. Ví dụ: A09-QLLĐNN.01, trong đó: A09 là mã số của Bộ Lao động - Thương binh và Xã hội; QLLĐNN là Cục Quản lý lao động ngoài nước; 01 là số thứ tự công chức thanh tra chuyên ngành được cấp thẻ."
+            },
+            {
+                "cid": "154737",
+                "rerank_score": 0.0172,
+                "vector_score": 0.8551,
+                "text_snippet": "Thẻ công chức thanh tra chuyên ngành Công Thương ... 3. Thời hạn sử dụng Thẻ là 05 năm kể từ ngày cấp. ..."
+            },
+            {
+                "cid": "99555",
+                "rerank_score": 0.0129,
+                "vector_score": 0.8617,
+                "text_snippet": "\"Điều 22.Tiêu chuẩn người huấn luyện an toàn, vệ sinh lao động 1. Huấn luyện hệ thống chính sách, pháp luật về an toàn, vệ sinh lao động a) Người có trình độ từ đại học trở lên và có ít nhất 03 năm làm công việc nghiên cứu, xây dựng chính sách, pháp luật, thanh tra, kiểm tra, quản lý về an toàn, vệ sinh lao động; b) Người có trình độ cao đẳng và có ít nhất 04 năm làm công việc nghiên cứu, xây dựng chính sách, pháp luật, thanh tra, kiểm tra, quản lý về an toàn, vệ sinh lao động. 2. Huấn luyện nội dung nghiệp vụ công tác an toàn, vệ sinh lao động và nội dung kiến thức cơ bản về an toàn, vệ sinh lao động: a) Người có trình độ từ đại học trở lên và có ít nhất 03 năm làm công việc xây dựng hoặc tổ chức triển khai về công tác an toàn, vệ sinh lao động; b) Người có trình độ cao đẳng và có ít nhất 04 năm làm công việc xây dựng, tổ chức triển khai thực hiện công tác an toàn, vệ sinh lao động; c) Người làm công tác an toàn, vệ sinh lao động tại doanh nghiệp không thuộc điểm a, điểm b Khoản này và có ít nhất 05 năm làm công việc an toàn, vệ sinh lao động.\""
+            }
+        ]
+    }
+]

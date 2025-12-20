@@ -10,7 +10,7 @@ from pymilvus import MilvusClient
 from utils.models.embedder import EmbeddingModel
 from chunking import SimpleChunker
 
-from utils.helper import setup_logger
+from src.helper import setup_logger
 
 """
 python index.py --input "data/filtered_corpus.csv" --output "vector_db/VN_legal.db" --collection "default" --model-name "intfloat/multilingual-e5-base" --batch-size 64
