@@ -1,0 +1,13 @@
+accelerate
+pymilvus
+milvus-lite
+transformers
+qwen-vl-utils[decord]==0.0.8
+peft
+pymupdf
+bitsandbytes
+sentence-transformers
+gradio
+pillow
+pandas
+numpy
