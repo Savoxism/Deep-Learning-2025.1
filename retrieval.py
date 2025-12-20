@@ -3,7 +3,6 @@ import json
 import ast
 import re
 from tqdm import tqdm
-import random
 
 from pymilvus import MilvusClient
 from utils.models.embedder import EmbeddingModel

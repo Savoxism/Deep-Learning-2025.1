@@ -26,6 +26,7 @@ class VLMConfig:
     adapter_model: Optional[str] = None  # Path to LoRA adapter (if any)
     load_in_4bit: bool = True            
     device_map: str = "auto"
+    
     default_dpi: int = 200
     default_max_new_tokens: int = 1024
 
