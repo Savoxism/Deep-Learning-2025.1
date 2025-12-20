@@ -17,13 +17,14 @@ from utils.models.reranker import RerankingModel
 from utils.models.slm import LegalSLM, SLMConfig
 
 # Models
-VLM_MODEL_ID = "Qwen/Qwen2.5-VL-3B-Instruct" 
+VLM_BASE_MODEL = "Qwen/Qwen2.5-VL-7B-Instruct" 
+VLM_ADAPTER_PATH = "Ewengc21/qwen_qlora_dl_project"
 
-EMBEDDING_MODEL_ID = "intfloat/multilingual-e5-base" 
+EMBEDDING_MODEL_ID = "Savoxism/vietnamese-legal-embedding-finetuned" 
 RERANKER_MODEL_ID = "BAAI/bge-reranker-base"
 
-SLM_BASE_MODEL = "Qwen/Qwen2.5-3B-Instruct"
-SLM_ADAPTER_PATH = None
+SLM_BASE_MODEL = "unsloth/llama-3-8b-bnb-4bit"
+SLM_ADAPTER_PATH = "Savoxism/Llama3-Adapter-DL-Project"
 
 DB_URI = "vector_db/milvus_demo.db"
 COLLECTION_NAME = "demo_rag_collection"
@@ -32,14 +33,15 @@ COLLECTION_NAME = "demo_rag_collection"
 print(">>> Initializing Models...")
 # VLM
 vlm_config = VLMConfig(
-    base_model=VLM_MODEL_ID,
+    base_model=VLM_BASE_MODEL,
     load_in_4bit = True,
-    adapter_model=None,
+    adapter_model=VLM_ADAPTER_PATH,
     device_map="auto", 
     default_max_new_tokens=1024,
     default_dpi=200,
 )
-print(f"Loading VLM: {VLM_MODEL_ID}...")
+
+print(f"Loading VLM: {VLM_BASE_MODEL}...")
 vlm_model = VisionLanguageModel(config=vlm_config)
 
 # retriever
@@ -51,7 +53,6 @@ print(f"Loading Reranker: {RERANKER_MODEL_ID}...")
 reranker = RerankingModel(model_name=RERANKER_MODEL_ID)
 
 # SLM
-print(f"Loading SLM: {SLM_BASE_MODEL}...")
 slm_conf = SLMConfig(
     base_model=SLM_BASE_MODEL,
     adapter_model=SLM_ADAPTER_PATH, 
@@ -59,8 +60,8 @@ slm_conf = SLMConfig(
     max_seq_length=2048,
     device_map="auto",
 )
+print(f"Loading SLM: {SLM_BASE_MODEL}...")
 slm_model = LegalSLM(config=slm_conf)
-
 
 chunker = SimpleChunker(chunk_size=128, overlap=16)
 milvus_client = MilvusClient(uri=DB_URI)
