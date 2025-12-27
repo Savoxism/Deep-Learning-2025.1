@@ -11,3 +11,4 @@ gradio
 pillow
 pandas
 numpy
+aiogram==3.4.1

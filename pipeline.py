@@ -2,7 +2,17 @@ import os
 import gc
 import uuid
 import torch
-import gradio as gr
+import asyncio
+import logging
+from types import SimpleNamespace
+
+# Telegram imports
+from aiogram import Bot, Dispatcher, F
+from aiogram.types import Message, BufferedInputFile
+from aiogram.filters import CommandStart
+from aiogram.enums import ParseMode
+
+# DB & Model imports
 from pymilvus import MilvusClient
 import numpy as np
 
@@ -12,15 +22,21 @@ from utils.models.embedder import EmbeddingModel
 from utils.models.reranker import RerankingModel
 from chunking import SimpleChunker
 
-# VLM Configuration
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+from huggingface_hub import login
+
+HUGGINGFACE_API_TOKEN="<API_KEY>" # replace with your token
+login(HUGGINGFACE_API_TOKEN)
+
+TELEGRAM_TOKEN = "<API_KEY>" # replace with your token
+
+# Model Configs
 VLM_BASE_MODEL = "Qwen/Qwen2.5-VL-7B-Instruct"
 VLM_ADAPTER = "Ewengc21/qwen_qlora_dl_project"
-
-# SLM Configuration
-SLM_BASE_MODEL = "unsloth/llama-3-8b-bnb-4bit"
-SLM_ADAPTER = "Savoxism/Llama3-Adapter-DL-Project"
-
-# Retrieval Models
+SLM_BASE_MODEL = "meta-llama/Llama-3.2-3B-Instruct" # this must change. 
+# SLM_ADAPTER = "Savoxism/Llama3-Adapter-DL-Project"
 EMBEDDING_MODEL_ID = "intfloat/multilingual-e5-base"
 RERANKER_MODEL_ID = "BAAI/bge-reranker-base"
 
@@ -31,32 +47,26 @@ COLLECTION_NAME = "legal_rag_collection"
 # ---------------------------------------------------------
 # 2. Global State & Lazy Loading
 # ---------------------------------------------------------
-# Lightweight models can be loaded globally or lazily depending on VRAM
-# Here we load Embedder/Reranker globally as they are relatively small, 
-# but SLM and VLM are swapped in/out.
-
 print(">>> Initializing Core Components...")
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-# Load Embedder
+# Load Lightweight Models Globally
 try:
     embedder = EmbeddingModel(model_name=EMBEDDING_MODEL_ID, device=device)
 except Exception as e:
-    print(f"Error loading embedder: {e}")
+    logger.error(f"Error loading embedder: {e}")
     embedder = None
 
-# Load Reranker
 try:
     reranker = RerankingModel(model_name=RERANKER_MODEL_ID)
 except Exception as e:
-    print(f"Error loading reranker: {e}")
+    logger.error(f"Error loading reranker: {e}")
     reranker = None
 
-# Initialize Chunker & DB
 chunker = SimpleChunker(chunk_size=256, overlap=32)
 milvus_client = MilvusClient(uri=DB_URI)
 
-# Placeholders for Heavy Models
+# Heavy Models (Lazy Loaded)
 vlm_model = None
 slm_model = None
 
@@ -69,17 +79,15 @@ def clean_memory():
     gc.collect()
 
 def load_vlm_lazy():
-    """Loads VLM, unloading SLM if necessary."""
     global vlm_model, slm_model
-    
     if slm_model is not None:
-        print("Creating VRAM space: Unloading SLM...")
+        logger.info("Unloading SLM to free VRAM...")
         del slm_model
         slm_model = None
         clean_memory()
     
     if vlm_model is None:
-        print(f"🔄 Lazy Loading VLM: {VLM_BASE_MODEL}...")
+        logger.info(f"🔄 Lazy Loading VLM: {VLM_BASE_MODEL}...")
         conf = VLMConfig(
             base_model=VLM_BASE_MODEL, 
             adapter_model=VLM_ADAPTER,
@@ -90,20 +98,18 @@ def load_vlm_lazy():
     return vlm_model
 
 def load_slm_lazy():
-    """Loads SLM, unloading VLM if necessary."""
     global vlm_model, slm_model
-
     if vlm_model is not None:
-        print("Creating VRAM space: Unloading VLM...")
+        logger.info("Unloading VLM to free VRAM...")
         del vlm_model
         vlm_model = None
         clean_memory()
 
     if slm_model is None:
-        print(f"🔄 Lazy Loading SLM: {SLM_BASE_MODEL}...")
+        logger.info(f"🔄 Lazy Loading SLM: {SLM_BASE_MODEL}...")
         conf = SLMConfig(
             base_model=SLM_BASE_MODEL,
-            adapter_model=SLM_ADAPTER,
+            # adapter_model=SLM_ADAPTER,
             load_in_4bit=True,
             max_seq_length=2048
         )
@@ -111,43 +117,37 @@ def load_slm_lazy():
     return slm_model
 
 # ---------------------------------------------------------
-# 3. Core Logic
+# 3. Core Logic (Synchronous)
 # ---------------------------------------------------------
+# Note: These functions remain synchronous (blocking).
+# We will run them in a separate thread using asyncio loop.run_in_executor
 
-def process_pdf_ingestion(pdf_file) -> str:
-    """
-    Pipeline: PDF -> VLM (Markdown) -> Chunker -> Embedder -> Milvus
-    """
+def process_pdf_ingestion(file_path: str, original_filename: str) -> str:
     # 1. Load VLM
     try:
         model = load_vlm_lazy()
     except Exception as e:
-        return f"Error loading VLM (OOM?): {e}"
+        return f"❌ Error loading VLM: {e}"
 
-    if pdf_file is None: return "Error: No file uploaded."
-    
-    file_path = pdf_file.name
     output_md_path = file_path.replace(".pdf", ".md")
     
     # 2. Convert PDF to Markdown
     try:
-        print(f"Processing PDF: {file_path}...")
+        logger.info(f"Processing PDF: {file_path}")
         model.pdf_to_markdown(pdf_path=file_path, output_md_path=output_md_path, verbose=True)
         with open(output_md_path, "r", encoding="utf-8") as f:
             full_text = f.read()
     except Exception as e:
-        return f"Error during VLM Inference: {e}"
+        return f"❌ Error during VLM Inference: {e}"
 
     # 3. Chunk & Embed
     doc_id = int(uuid.uuid4().int & (1<<32)-1)
     chunks = chunker.chunk_text(full_text, cid=doc_id)
-    print(f"Generated {len(chunks)} chunks.")
     
     if not chunks:
-        return "Error: No text extracted."
+        return "❌ Error: No text extracted."
 
     texts = [c['text'] for c in chunks]
-    # Use smaller batch size to be safe with VRAM
     embeddings = embedder.encode(texts, batch_size=8) 
 
     # 4. Save to Milvus
@@ -162,66 +162,56 @@ def process_pdf_ingestion(pdf_file) -> str:
     
     data = []
     for c, emb in zip(chunks, embeddings):
-        # Convert numpy array to list for JSON serialization
         vec = emb.tolist() if isinstance(emb, np.ndarray) else emb
         data.append({
             "vector": vec, 
             "text": c['text'], 
             "cid": str(c['cid']),
-            "chunk_index": c['chunk_index']
+            "source": original_filename
         })
 
     milvus_client.insert(collection_name=COLLECTION_NAME, data=data)
     
     # 5. Cleanup
-    # Unload VLM immediately to free memory for Chat
     global vlm_model
     del vlm_model
     vlm_model = None
     clean_memory()
-    print("🧹 Cleanup VLM finished.")
 
-    return f"Success! Extracted and indexed {len(chunks)} chunks from '{os.path.basename(file_path)}'."
+    return f"✅ **Success!**\nIndexed {len(chunks)} chunks from `{original_filename}`."
 
-def rag_response(query: str, top_k: int, top_m: int):
-    """
-    Pipeline: Query -> Embedder -> Milvus (Top-K) -> Reranker (Top-M) -> SLM -> Answer
-    """
-    if not query.strip():
-        return "Please enter a query.", ""
+def rag_response(query: str, top_k: int=10, top_m: int=3):
+    if not query.strip(): return "Empty query.", ""
 
-    # 1. Load SLM (Lazy)
+    # 1. Load SLM
     try:
         model = load_slm_lazy()
     except Exception as e:
-        return f"Error loading SLM: {e}", ""
+        return f"❌ Error loading SLM: {e}", ""
 
-    # 2. Retrieve (Vector Search)
+    # 2. Retrieve
     query_vec = embedder.encode([query], batch_size=1)[0]
     res = milvus_client.search(
         collection_name=COLLECTION_NAME, 
         data=[query_vec], 
         limit=top_k, 
-        output_fields=["text", "cid"]
+        output_fields=["text", "source"]
     )
     
     if not res or not res[0]: 
-        return "No relevant documents found in the database.", ""
+        return "No relevant documents found.", ""
     
     hits = res[0]
     
     # 3. Rerank
-    # Prepare pairs [Query, Doc]
     pairs = [[query, h['entity']['text']] for h in hits]
     scores = reranker.predict(pairs)
-    
-    # Zip, Sort, and Slice Top-M
     scored_hits = sorted(zip(hits, scores), key=lambda x: x[1], reverse=True)[:top_m]
     
-    # Build Context
-    context_text = "\n\n".join([f"Document Fragment (Score {s:.4f}):\n{h['entity']['text']}" for h, s in scored_hits])
+    # Context
+    context_text = "\n\n".join([f"Source ({h['entity'].get('source', 'Unknown')} - Score {s:.2f}):\n{h['entity']['text']}" for h, s in scored_hits])
     
-    # 4. Generate Answer
+    # 4. Generate
     try:
         answer = model.generate(context=context_text, question=query)
     except Exception as e:
@@ -230,150 +220,108 @@ def rag_response(query: str, top_k: int, top_m: int):
     return answer, context_text
 
 # ---------------------------------------------------------
-# 4. Gradio Interface
+# 4. Telegram Bot Handlers
 # ---------------------------------------------------------
+bot = Bot(token=TELEGRAM_TOKEN)
+dp = Dispatcher()
 
-# Custom CSS for Professional Look
-custom_css = """
-.gradio-container {max_width: 1400px !important; margin: auto;}
-.header-container {
-    text-align: center; 
-    margin-bottom: 2rem; 
-    padding: 2rem; 
-    background: linear-gradient(to right, #1e293b, #334155); 
-    color: white; 
-    border-radius: 12px;
-}
-.header-title {font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem;}
-.header-subtitle {font-size: 1rem; opacity: 0.8; font-family: monospace;}
-.context-box {
-    background-color: #f8fafc !important;
-    border: 1px solid #e2e8f0 !important;
-    font-family: 'JetBrains Mono', monospace !important;
-    font-size: 13px !important;
-    line-height: 1.6;
-}
-.terminal-log textarea {
-    background-color: #0f172a !important;
-    color: #4ade80 !important;
-    font-family: 'Courier New', monospace !important;
-}
-.disclaimer {
-    text-align: center; 
-    font-size: 0.8rem; 
-    color: #64748b; 
-    margin-top: 2rem;
-}
-"""
+@dp.message(CommandStart())
+async def command_start_handler(message: Message) -> None:
+    """
+    This handler receives messages with `/start` command
+    """
+    await message.answer(
+        "⚖️ **Legal AI Agent Ready**\n\n"
+        "1. **Upload a PDF** to ingest and index a contract.\n"
+        "2. **Type a question** to analyze indexed documents.\n\n"
+        "*Note: Processing large PDFs takes time due to VLM OCR.*",
+    )
 
-legal_theme = gr.themes.Soft(
-    primary_hue="slate",
-    secondary_hue="blue",
-).set(
-    button_primary_background_fill="#2563eb",
-    button_primary_text_color="#ffffff",
-)
+@dp.message(F.document)
+async def handle_document(message: Message):
+    """
+    Handles PDF uploads.
+    """
+    doc = message.document
+    if not doc.file_name.lower().endswith('.pdf'):
+        await message.answer("⚠️ Please upload a **PDF** file.")
+        return
 
-with gr.Blocks(theme=legal_theme, css=custom_css, title="Legal AI Workbench") as demo:
+    status_msg = await message.answer(f"📥 Downloading `{doc.file_name}`...")
     
-    # --- Header ---
-    with gr.Column(elem_classes="header-container"):
-        gr.HTML(f"""
-            <div class='header-title'>⚖️ Agentic Document Intelligence</div>
-            <div class='header-subtitle'>
-                VLM: {VLM_BASE_MODEL} | SLM: {SLM_BASE_MODEL} | Reranker: BGE-M3
-            </div>
-        """)
+    # Create temp directory
+    os.makedirs("temp_downloads", exist_ok=True)
+    local_path = os.path.join("temp_downloads", doc.file_name)
+    
+    # Download file
+    await bot.download(doc, destination=local_path)
+    
+    await status_msg.edit_text(f"👁️ **Processing VLM...**\nReading: `{doc.file_name}`\n_This uses GPU and may take a moment._")
+    
+    # Run blocking ingestion in a separate thread
+    loop = asyncio.get_event_loop()
+    try:
+        # We wrap the call in an executor so it doesn't freeze the bot
+        result = await loop.run_in_executor(
+            None, 
+            process_pdf_ingestion, 
+            local_path, 
+            doc.file_name
+        )
+        await status_msg.edit_text(result)
+    except Exception as e:
+        await status_msg.edit_text(f"❌ Critical Error: {str(e)}")
+    finally:
+        # Cleanup temp file
+        if os.path.exists(local_path):
+            os.remove(local_path)
 
-    # --- Tab 1: Ingestion ---
-    with gr.Tab("📁 Document Ingestion"):
-        with gr.Row():
-            with gr.Column(scale=1):
-                gr.Markdown("### 1. Upload Contract")
-                gr.Markdown("Upload a PDF to extract structure, OCR content, and index it into the Vector Database.")
-                
-                pdf_input = gr.File(
-                    label="Legal Document (PDF)", 
-                    file_types=[".pdf"],
-                    file_count="single",
-                    height=250
-                )
-                
-                process_btn = gr.Button("🚀 Process & Index Document", variant="primary", size="lg")
-
-            with gr.Column(scale=2):
-                gr.Markdown("### 2. System Logs")
-                status_output = gr.Textbox(
-                    label="Execution Log", 
-                    placeholder="Waiting for upload...",
-                    lines=16, 
-                    interactive=False,
-                    elem_classes="terminal-log"
-                )
-
-    # --- Tab 2: Chat & Retrieval ---
-    with gr.Tab("💬 Legal Analysis"):
+@dp.message(F.text)
+async def handle_text(message: Message):
+    """
+    Handles text queries (RAG).
+    """
+    query = message.text
+    status_msg = await message.answer("🧠 **Thinking...** (Retrieving & Reasoning)")
+    
+    loop = asyncio.get_event_loop()
+    try:
+        # Run blocking RAG in executor
+        answer, context = await loop.run_in_executor(
+            None, 
+            rag_response, 
+            query, 
+            10, # Top-K
+            3   # Top-M
+        )
         
-        with gr.Group():
-            with gr.Row(variant="panel"):
-                query_input = gr.Textbox(
-                    label="Legal Query",
-                    placeholder="e.g., Under what conditions can the supplier terminate the agreement without notice?",
-                    scale=4,
-                    autofocus=True
-                )
-                ask_btn = gr.Button("Analyze", variant="primary", scale=1, size="lg")
+        # Split message if too long for Telegram (Limit is 4096 chars)
+        response_text = f"🤖 **AI Assessment:**\n{answer}"
         
-        with gr.Accordion("⚙️ Retrieval Settings (Advanced)", open=False):
-            with gr.Row():
-                k_slider = gr.Slider(minimum=5, maximum=50, value=10, step=1, label="Retrieval (Top-K)")
-                m_slider = gr.Slider(minimum=1, maximum=10, value=3, step=1, label="Reranker (Top-M)")
+        if len(response_text) > 4000:
+            response_text = response_text[:4000]
+            
+        await status_msg.edit_text(response_text)
+        
+        # Send context as a separate message or file if requested
+        # For this demo, we send a short snippet
+        if context:
+            # Create a small preview of context
+            context_preview = f"📚 **Cited Evidence:**\n\n{context[:100]}"
+            if len(context) > 1000: context_preview += "\n...(truncated)"
+            await message.answer(context_preview)
+            
+    except Exception as e:
+        await status_msg.edit_text(f"❌ Error during analysis: {str(e)}")
 
-        with gr.Row(equal_height=True):
-            with gr.Column(scale=3, variant="panel"):
-                gr.Markdown("### 🤖 AI Assessment")
-                answer_output = gr.Markdown(
-                    value="*The legal analysis will appear here...*",
-                    line_breaks=True
-                )
-
-            with gr.Column(scale=2):
-                gr.Markdown("### 📚 Cited Evidence")
-                context_output = gr.Textbox(
-                    label="Retrieved Context (Raw)",
-                    placeholder="No context retrieved yet.",
-                    lines=20,
-                    interactive=False,
-                    elem_classes="context-box",
-                    show_copy_button=True
-                )
-
-    # --- Footer ---
-    gr.HTML("""
-        <div class="disclaimer">
-            ⚠️ <b>Disclaimer:</b> This AI tool is designed for assistance purposes only and does not constitute professional legal advice. 
-            Always verify citations against original documents.
-        </div>
-    """)
-
-    # --- Events ---
-    process_btn.click(
-        fn=process_pdf_ingestion, 
-        inputs=[pdf_input], 
-        outputs=[status_output]
-    )
-
-    ask_btn.click(
-        fn=rag_response, 
-        inputs=[query_input, k_slider, m_slider], 
-        outputs=[answer_output, context_output]
-    )
-    query_input.submit(
-        fn=rag_response, 
-        inputs=[query_input, k_slider, m_slider], 
-        outputs=[answer_output, context_output]
-    )
+async def main() -> None:
+    # Delete webhook if exists to ensure polling works
+    await bot.delete_webhook(drop_pending_updates=True)
+    print("🚀 Telegram Bot Started via Long Polling...")
+    await dp.start_polling(bot)
 
 if __name__ == "__main__":
-    demo.queue()
-    demo.launch(share=True, debug=True)
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        print("Bot stopped.")
