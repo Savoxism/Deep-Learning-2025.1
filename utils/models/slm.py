@@ -31,7 +31,7 @@ class LegalSLM:
     def __init__(self, config: SLMConfig = SLMConfig()):
         self.config = config
 
-        # Setup 4-bit Quantization 
+        # 1. Setup 4-bit Quantization
         bnb_config = None
         if self.config.load_in_4bit:
             print("⚙️ [LegalSLM] 4-bit quantization enabled.")
@@ -42,7 +42,7 @@ class LegalSLM:
                 bnb_4bit_compute_dtype=torch.float16,
             )
 
-        # Load Base Model
+        # 2. Load Base Model
         print(f"🔄 [LegalSLM] Loading Base Model: {self.config.base_model}")
         self.model = AutoModelForCausalLM.from_pretrained(
             self.config.base_model,
@@ -52,13 +52,13 @@ class LegalSLM:
             trust_remote_code=True,
         )
 
-        # Load Tokenizer
+        # 3. Load Tokenizer
         self.tokenizer = AutoTokenizer.from_pretrained(
             self.config.base_model,
             trust_remote_code=True,
         )
         
-        # Padding token fix for Llama 3
+        # Padding fix for Llama 3
         if self.tokenizer.pad_token is None:
              self.tokenizer.pad_token = self.tokenizer.eos_token
 
@@ -77,12 +77,25 @@ class LegalSLM:
                 print("   ⚠️ Running with Base Model only.")
 
         self.model.eval()
+        
+        # --- DEFINING TEMPLATE STRING HERE (Safe & Explicit) ---
+        self.llama3_template = (
+            "{% set loop_messages = messages %}"
+            "{% for message in loop_messages %}"
+            "{% set content = '<|start_header_id|>' + message['role'] + '<|end_header_id|>\n\n'+ message['content'] | trim + '<|eot_id|>' %}"
+            "{% if loop.index0 == 0 %}"
+            "{% set content = '<|begin_of_text|>' + content %}"
+            "{% endif %}"
+            "{{ content }}"
+            "{% endfor %}"
+            "{% if add_generation_prompt %}"
+            "{{ '<|start_header_id|>assistant<|end_header_id|>\n\n' }}"
+            "{% endif %}"
+        )
+        
         print("✅ [LegalSLM] Model initialization complete!")
 
     def _build_messages(self, context: str, question: str, task: str):
-        """
-        Build chat messages structure.
-        """
         q_lower = (question or "").lower()
         is_risk = (task == "risk") or ("risk" in q_lower) or ("json" in q_lower)
 
@@ -108,15 +121,17 @@ class LegalSLM:
 
     def generate(self, context: str, question: str, task: str = "qa") -> str:
         """
-        Generate response using proper Llama 3 template and terminators.
+        Generate response passing the template explicitly.
         """
         messages = self._build_messages(context=context, question=question, task=task)
-        
-        # apply chat template 
+
+        # --- FIX: Pass 'chat_template' argument explicitly ---
+        # This overrides whatever is inside the tokenizer configuration.
         prompt = self.tokenizer.apply_chat_template(
             messages,
             tokenize=False,
-            add_generation_prompt=True
+            add_generation_prompt=True,
+            chat_template=self.llama3_template  # <--- HERE IS THE FIX
         )
 
         inputs = self.tokenizer(
@@ -126,7 +141,6 @@ class LegalSLM:
             max_length=self.config.max_seq_length,
         ).to(self.model.device)
 
-        # 2. Define Terminators (Quan trọng cho Llama 3)
         terminators = [
             self.tokenizer.eos_token_id,
             self.tokenizer.convert_tokens_to_ids("<|eot_id|>")
@@ -135,7 +149,7 @@ class LegalSLM:
         with torch.no_grad():
             outputs = self.model.generate(
                 **inputs,
-                max_new_tokens=128,
+                max_new_tokens=256,
                 temperature=0.1,
                 do_sample=True,
                 use_cache=True,
@@ -143,7 +157,6 @@ class LegalSLM:
                 eos_token_id=terminators, 
             )
 
-        # 3. Decode (Cắt bỏ prompt đầu vào)
         generated_tokens = outputs[0][inputs["input_ids"].shape[-1]:]
         text = self.tokenizer.decode(generated_tokens, skip_special_tokens=True).strip()
         
@@ -151,17 +164,15 @@ class LegalSLM:
 
 
 if __name__ == "__main__":
-    print("--- Testing SLM (Llama 3 Final) ---")
-    
-    # Test Config
+    print("--- Testing SLM (Explicit Template) ---")
     config = SLMConfig(
         base_model="meta-llama/Meta-Llama-3-8B-Instruct",
         adapter_model=None 
     )
 
     try:
-        # slm = LegalSLM(config)
-        # print(slm.generate("Contract says rent is $500.", "What is the rent?"))
-        pass
+        slm = LegalSLM(config)
+        # Test nhanh để chắc chắn không lỗi template
+        print(slm.generate("Rent is 500.", "What is rent?"))
     except Exception as e:
         print(f"Error: {e}")
