@@ -8,7 +8,6 @@ from PIL import Image
 import fitz  # PyMuPDF
 from tqdm import tqdm
 
-
 from transformers import (
     Qwen2_5_VLForConditionalGeneration, 
     AutoProcessor, 
@@ -23,7 +22,7 @@ class VLMConfig:
     Configuration for the Vision Language Model.
     """
     base_model: str = "Qwen/Qwen2.5-VL-7B-Instruct"
-    adapter_model: Optional[str] = None  # Path to LoRA adapter (if any)
+    adapter_model: Optional[str] = None  
     load_in_4bit: bool = True            
     device_map: str = "auto"
     
@@ -32,19 +31,19 @@ class VLMConfig:
 
 class VisionLanguageModel:
     """
-    Wrapper for Qwen2.5-VL with support for LoRA Adapters and 4-bit quantization.
+    Wrapper for Qwen2.5-VL with support for LoRA Adapters (Local or HF Hub) and 4-bit quantization.
     """
     def __init__(self, config: VLMConfig = VLMConfig()):
         self.config = config
 
-        # 1. Load Processor (Always from base model)
+        # 1. Load Processor
         print(f"🔧 [VLM] Loading processor: {self.config.base_model}")
         self.processor = AutoProcessor.from_pretrained(
             self.config.base_model,
             trust_remote_code=True,
         )
 
-        # 2. Configure 4-bit Quantization (Vital for VLM + Adapter)
+        # 2. Configure 4-bit Quantization
         quantization_config = None
         if self.config.load_in_4bit:
             print("⚙️ [VLM] Enabling 4-bit quantization (BitsAndBytes)...")
@@ -62,22 +61,25 @@ class VisionLanguageModel:
             device_map=self.config.device_map,
             trust_remote_code=True,
             quantization_config=quantization_config,
-            dtype=torch.float16 if self.config.load_in_4bit else "auto"
+            torch_dtype=torch.float16 if self.config.load_in_4bit else "auto"
         )
 
-        # 4. Load LoRA Adapter (The part you asked about)
+        # 4. Load LoRA Adapter (Updated logic)
         if self.config.adapter_model:
-            if os.path.exists(self.config.adapter_model):
-                print(f"🧬 [VLM] Loading LoRA Adapter: {self.config.adapter_model}")
+            print(f"🧬 [VLM] Attempting to load Adapter: {self.config.adapter_model}")
+            try:
                 self.model = PeftModel.from_pretrained(
                     self.model, 
                     self.config.adapter_model
                 )
-            else:
-                print(f"⚠️ WARNING: Adapter path '{self.config.adapter_model}' not found. Using Base Model only.")
+                print(f"✅ [VLM] Adapter loaded successfully.")
+            except Exception as e:
+                print(f"❌ [VLM] Failed to load adapter '{self.config.adapter_model}'.")
+                print(f"   Error details: {e}")
+                print("   ⚠️ Running with Base Model only.")
 
         self.model.eval()
-        print("✅ [VLM] Model loaded successfully.")
+        print("✅ [VLM] Model initialization complete.")
 
     def _model_device(self) -> torch.device:
         return next(self.model.parameters()).device
@@ -96,9 +98,6 @@ class VisionLanguageModel:
         return pages
     
     def page_to_markdown(self, page_img: Image.Image, page_num: int, verbose: bool = True) -> str:
-        """
-        Converts a single PDF page image to Markdown.
-        """
         # Prompt explicitly tuned for document parsing
         user_text = (
             "Analyze this document page image and extract its content into clean Markdown format.\n"
@@ -117,7 +116,6 @@ class VisionLanguageModel:
             ],
         }]
 
-        # Prepare inputs
         text_prompt = self.processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
         image_inputs, video_inputs = process_vision_info(messages)
         
@@ -133,14 +131,12 @@ class VisionLanguageModel:
 
         if verbose: print(f"   --> Inferencing Page {page_num}...")
         
-        # Inference
         with torch.no_grad():
             generated_ids = self.model.generate(
                 **inputs, 
                 max_new_tokens=self.config.default_max_new_tokens
             )
 
-        # Decode output
         generated_ids_trimmed = generated_ids[:, inputs["input_ids"].shape[1]:]
         md = self.processor.batch_decode(generated_ids_trimmed, skip_special_tokens=True)[0].strip()
         
@@ -169,18 +165,15 @@ class VisionLanguageModel:
         return output_md_path
 
 if __name__ == "__main__":
-    # EXAMPLE USAGE
-    
-    # Option 1: Base Model Only
-    # conf = VLMConfig(base_model="Qwen/Qwen2.5-VL-3B-Instruct")
-    
-    # Option 2: With LoRA Adapter
+    # load with LoRA Adapter from Hugging Face
+    print("--- Testing Hugging Face Adapter Loading ---")
     conf = VLMConfig(
-        base_model="Qwen/Qwen2.5-VL-3B-Instruct",
-        adapter_model="models/my_invoice_adapter" # Path to your folder containing adapter_model.bin
+        base_model="Qwen/Qwen2.5-VL-7B-Instruct",
+        adapter_model="Ewengc21/qwen_qlora_dl_project" 
     )
+    
     try:
-        vlm = VisionLanguageModel(conf)
-        # vlm.pdf_to_markdown("contract.pdf", "contract.md")
+        # vlm = VisionLanguageModel(conf)
+        pass 
     except Exception as e:
-        print(e)
+        print(f"Main Error: {e}")
