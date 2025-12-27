@@ -16,6 +16,12 @@ from utils.models.embedder import EmbeddingModel
 from utils.models.reranker import RerankingModel
 from utils.models.slm import LegalSLM, SLMConfig
 
+from huggingface_hub import login
+from dotenv import load_dotenv
+
+load_dotenv()
+login(token=os.environ.get("HUGGINGFACE_API_TOKEN", ""))
+
 # Models
 VLM_BASE_MODEL = "Qwen/Qwen2.5-VL-7B-Instruct" 
 VLM_ADAPTER_PATH = "Ewengc21/qwen_qlora_dl_project"
@@ -28,7 +34,6 @@ SLM_ADAPTER_PATH = "Savoxism/Llama3-Adapter-DL-Project"
 
 DB_URI = "vector_db/milvus_demo.db"
 COLLECTION_NAME = "demo_rag_collection"
-
 
 print(">>> Initializing Models...")
 # VLM
@@ -453,7 +458,7 @@ custom_css = """
 
 with gr.Blocks(theme=gr.themes.Soft(), css=custom_css, title="Legal RAG Pipeline (Qwen 3B Edition)") as demo:
     gr.Markdown("# Legal AI RAG Pipeline")
-    gr.Markdown(f"**Models:** VLM: {VLM_MODEL_ID} | SLM: {SLM_BASE_MODEL} | Reranker: {RERANKER_MODEL_ID}")
+    gr.Markdown(f"**Models:** VLM: {VLM_BASE_MODEL} | SLM: {SLM_BASE_MODEL} | Reranker: {RERANKER_MODEL_ID}")
 
     with gr.Tab("Step 1: Data Ingestion"):
         with gr.Row():
