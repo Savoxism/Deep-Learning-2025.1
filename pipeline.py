@@ -451,56 +451,177 @@ def rag_response(query: str, top_k: int = 10, top_m: int = 3):
 # ------------------------------
 # Gradio User Interface
 # ------------------------------
+legal_theme = gr.themes.Soft(
+    primary_hue="slate",
+    secondary_hue="blue",
+    neutral_hue="slate",
+    font=[gr.themes.GoogleFont("Inter"), "ui-sans-serif", "system-ui", "sans-serif"],
+).set(
+    body_background_fill="#f9fafb",
+    block_background_fill="#ffffff",
+    block_border_width="1px",
+    block_title_text_weight="600",
+    button_primary_background_fill="#2563eb",  # Professional Blue
+    button_primary_text_color="#ffffff",
+)
+
 custom_css = """
-#component-0 {max_width: 1200px; margin: auto;}
-.context-box textarea {font-size: 12px; color: #555; font-family: monospace;}
+/* Container adjustments */
+.gradio-container {max_width: 1400px !important; margin: auto;}
+
+/* Header Styling */
+.header-container {
+    text-align: center; 
+    margin-bottom: 2rem; 
+    padding: 2rem; 
+    background: linear-gradient(to right, #1e293b, #334155); 
+    color: white; 
+    border-radius: 12px;
+}
+.header-title {font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem;}
+.header-subtitle {font-size: 1rem; opacity: 0.8; font-family: monospace;}
+
+/* Context Box Styling (Right Column) */
+.context-box {
+    background-color: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 13px !important;
+    line-height: 1.6;
+}
+
+/* Make the processing log look like a terminal */
+.terminal-log textarea {
+    background-color: #0f172a !important;
+    color: #4ade80 !important; /* Matrix Green text */
+    font-family: 'Courier New', monospace !important;
+}
+
+/* Footer Disclaimer */
+.disclaimer {
+    text-align: center; 
+    font-size: 0.8rem; 
+    color: #64748b; 
+    margin-top: 2rem;
+}
 """
 
-with gr.Blocks(theme=gr.themes.Soft(), css=custom_css, title="Legal RAG Pipeline (Qwen 3B Edition)") as demo:
-    gr.Markdown("# Legal AI RAG Pipeline")
-    gr.Markdown(f"**Models:** VLM: {VLM_BASE_MODEL} | SLM: {SLM_BASE_MODEL} | Reranker: {RERANKER_MODEL_ID}")
+# ---------------------------------------------------------
+# 2. UI Layout
+# ---------------------------------------------------------
+with gr.Blocks(theme=legal_theme, css=custom_css, title="Legal AI Workbench") as demo:
+    
+    # --- Header ---
+    with gr.Column(elem_classes="header-container"):
+        gr.HTML("""
+            <div class='header-title'>⚖️ Agentic Document Intelligence</div>
+            <div class='header-subtitle'>
+                VLM: Qwen2.5-VL | SLM: Qwen2.5-3B | Reranker: BGE-M3
+            </div>
+        """)
 
-    with gr.Tab("Step 1: Data Ingestion"):
+    # --- Tab 1: Ingestion ---
+    with gr.Tab("📁 Document Ingestion"):
         with gr.Row():
+            # Left: Upload Controls
             with gr.Column(scale=1):
-                pdf_input = gr.File(label="Upload Legal PDF", file_types=[".pdf"])
-                process_btn = gr.Button("Process & Index", variant="primary")
-
-            with gr.Column(scale=2):
-                status_output = gr.Textbox(label="Processing Log", lines=12, interactive=False)
-
-        process_btn.click(fn=process_pdf_ingestion, inputs=[pdf_input], outputs=[status_output])
-
-    with gr.Tab("Step 2: Chat & Retrieval"):
-        with gr.Row():
-            with gr.Column(scale=2):
-                query_input = gr.Textbox(
-                    label="Enter your legal query",
-                    placeholder="e.g., What are the penalties for late tax filing?",
+                gr.Markdown("### 1. Upload Contract")
+                gr.Markdown("Upload a PDF to extract structure, OCR content, and index it into the Vector Database.")
+                
+                pdf_input = gr.File(
+                    label="Legal Document (PDF)", 
+                    file_types=[".pdf"],
+                    file_count="single",
+                    height=250
                 )
-                with gr.Row():
-                    k_slider = gr.Slider(minimum=5, maximum=50, value=10, step=1, label="Retrieval Top-K")
-                    m_slider = gr.Slider(minimum=1, maximum=10, value=3, step=1, label="Reranker Top-M")
-                ask_btn = gr.Button("Ask", variant="primary")
+                
+                process_btn = gr.Button("🚀 Process & Index Document", variant="primary", size="lg")
 
-            with gr.Column(scale=3):
-                answer_output = gr.Markdown(label="AI Answer")
-                with gr.Accordion("Retrieved Context (Reranked)", open=False):
-                    context_output = gr.Textbox(
-                        label="Raw Context",
-                        lines=12,
-                        interactive=False,
-                        elem_classes="context-box",
-                    )
+            # Right: Real-time Logs
+            with gr.Column(scale=2):
+                gr.Markdown("### 2. System Logs")
+                status_output = gr.Textbox(
+                    label="Execution Log", 
+                    placeholder="Waiting for upload...",
+                    lines=16, 
+                    interactive=False,
+                    elem_classes="terminal-log" # Applied custom CSS
+                )
 
-        ask_btn.click(fn=rag_response, inputs=[query_input, k_slider, m_slider], outputs=[answer_output, context_output])
+    # --- Tab 2: Chat & Retrieval ---
+    with gr.Tab("💬 Legal Analysis"):
+        
+        # Search Bar Section
+        with gr.Group():
+            with gr.Row(variant="panel"):
+                query_input = gr.Textbox(
+                    label="Legal Query",
+                    placeholder="e.g., Under what conditions can the supplier terminate the agreement without notice?",
+                    scale=4,
+                    autofocus=True
+                )
+                ask_btn = gr.Button("Analyze", variant="primary", scale=1, size="lg")
+        
+        # Advanced Settings (Hidden by default)
+        with gr.Accordion("⚙️ Retrieval Settings (Advanced)", open=False):
+            with gr.Row():
+                k_slider = gr.Slider(minimum=5, maximum=50, value=10, step=1, label="Retrieval (Top-K)")
+                m_slider = gr.Slider(minimum=1, maximum=10, value=3, step=1, label="Reranker (Top-M)")
 
+        # Results Section (Split View)
+        with gr.Row(equal_height=True):
+            
+            # Left: The AI Answer
+            with gr.Column(scale=3, variant="panel"):
+                gr.Markdown("### 🤖 AI Assessment")
+                answer_output = gr.Markdown(
+                    value="*The legal analysis will appear here...*",
+                    line_breaks=True
+                )
+
+            # Right: The Evidence
+            with gr.Column(scale=2):
+                gr.Markdown("### 📚 Cited Evidence")
+                context_output = gr.Textbox(
+                    label="Retrieved Context (Raw)",
+                    placeholder="No context retrieved yet.",
+                    lines=20,
+                    interactive=False,
+                    elem_classes="context-box",
+                    show_copy_button=True
+                )
+
+    # --- Footer ---
+    gr.HTML("""
+        <div class="disclaimer">
+            ⚠️ <b>Disclaimer:</b> This AI tool is designed for assistance purposes only and does not constitute professional legal advice. 
+            Always verify citations against original documents.
+        </div>
+    """)
+
+    # ---------------------------------------------------------
+    # 3. Event Handling
+    # ---------------------------------------------------------
+    
+    # Ingestion Event
+    process_btn.click(
+        fn=process_pdf_ingestion, 
+        inputs=[pdf_input], 
+        outputs=[status_output]
+    )
+
+    # Chat Event (Trigger on Click OR Enter key)
+    ask_btn.click(
+        fn=rag_response, 
+        inputs=[query_input, k_slider, m_slider], 
+        outputs=[answer_output, context_output]
+    )
+    query_input.submit(
+        fn=rag_response, 
+        inputs=[query_input, k_slider, m_slider], 
+        outputs=[answer_output, context_output]
+    )
 
 if __name__ == "__main__":
-    # Safer defaults for legal content
-    debug = bool(int(os.environ.get("GRADIO_DEBUG", "0")))
-
-    # Enable queue for multi-user stability (tune concurrency as needed)
-    demo.queue()
-
-    demo.launch(share=True, debug=debug)
+    demo.queue() # Enable queuing for better performance
+    demo.launch(share=True, debug=True)
