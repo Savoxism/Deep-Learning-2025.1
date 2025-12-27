@@ -16,8 +16,8 @@ class SLMConfig:
     """
     Configuration for the Small Language Model (SLM).
     """
-    # Đổi base model sang Llama 3 Instruct
-    base_model: str = "unsloth/llama-3-8b-bnb-4bit" 
+    # Using Llama-3-8B-Instruct
+    base_model: str = "meta-llama/Meta-Llama-3-8B-Instruct" 
     adapter_model: Optional[str] = None 
     
     load_in_4bit: bool = True
@@ -60,7 +60,25 @@ class LegalSLM:
             use_fast=True,
         )
 
-        # Llama 3 padding setup
+        # --- FIX: MANUALLY SET LLAMA 3 CHAT TEMPLATE ---
+        # If the model card doesn't provide it automatically, we define it here.
+        if self.tokenizer.chat_template is None:
+            print("⚠️ [LegalSLM] Chat template missing. Injecting Llama 3 template manually.")
+            self.tokenizer.chat_template = (
+                "{% set loop_messages = messages %}"
+                "{% for message in loop_messages %}"
+                "{% set content = '<|start_header_id|>' + message['role'] + '<|end_header_id|>\n\n'+ message['content'] | trim + '<|eot_id|>' %}"
+                "{% if loop.index0 == 0 %}"
+                "{% set content = '<|begin_of_text|>' + content %}"
+                "{% endif %}"
+                "{{ content }}"
+                "{% endfor %}"
+                "{% if add_generation_prompt %}"
+                "{{ '<|start_header_id|>assistant<|end_header_id|>\n\n' }}"
+                "{% endif %}"
+            )
+
+        # Llama 3 padding fix
         if self.tokenizer.pad_token is None:
              self.tokenizer.pad_token = self.tokenizer.eos_token
 
@@ -91,7 +109,6 @@ class LegalSLM:
         is_risk = (task == "risk") or ("risk" in q_lower) or ("json" in q_lower)
 
         if is_risk:
-            # Llama 3 prefers explicit persona and output format instructions
             system = (
                 "You are an expert legal auditor specializing in contract risk analysis. "
                 "Analyze the provided clause and extract potential risks. "
@@ -117,9 +134,7 @@ class LegalSLM:
         """
         messages = self._build_messages(context=context, question=question, task=task)
 
-        # Sử dụng apply_chat_template để tự động format theo chuẩn Llama 3
-        # Format sinh ra sẽ dạng:
-        # <|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\n...
+        # Apply chat template (Now safe because we injected the template in __init__)
         prompt = self.tokenizer.apply_chat_template(
             messages,
             tokenize=False,
@@ -133,8 +148,7 @@ class LegalSLM:
             max_length=self.config.max_seq_length,
         ).to(self.model.device)
 
-        # Định nghĩa các token kết thúc cho Llama 3
-        # <|eot_id|> là token kết thúc lượt (turn) đặc trưng
+        # Define Llama 3 terminators
         terminators = [
             self.tokenizer.eos_token_id,
             self.tokenizer.convert_tokens_to_ids("<|eot_id|>")
@@ -151,7 +165,7 @@ class LegalSLM:
                 eos_token_id=terminators, 
             )
 
-        # Cắt bỏ phần prompt đầu vào để lấy câu trả lời mới sinh ra
+        # Remove the input prompt from the output
         generated_tokens = outputs[0][inputs["input_ids"].shape[-1]:]
         text = self.tokenizer.decode(generated_tokens, skip_special_tokens=True).strip()
         
@@ -162,8 +176,8 @@ if __name__ == "__main__":
     print("--- Testing SLM (Llama 3 Config) ---")
     
     config = SLMConfig(
-        base_model="unsloth/llama-3-8b-bnb-4bit",
-        adapter_model= "Savoxism/Llama3-Adapter-DL-Project"
+        base_model="meta-llama/Meta-Llama-3-8B-Instruct",
+        adapter_model=None 
     )
 
     try:

@@ -19,8 +19,8 @@ from utils.models.slm import LegalSLM, SLMConfig
 from huggingface_hub import login
 from dotenv import load_dotenv
 
-load_dotenv()
-login(token=os.environ.get("HUGGINGFACE_API_TOKEN", ""))
+# load_dotenv()
+# login(token=os.environ.get("HUGGINGFACE_API_TOKEN", ""))
 
 # Models
 VLM_BASE_MODEL = "Qwen/Qwen2.5-VL-7B-Instruct" 
