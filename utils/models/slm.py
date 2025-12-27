@@ -100,17 +100,19 @@ class LegalSLM:
         is_risk = (task == "risk") or ("risk" in q_lower) or ("json" in q_lower)
 
         if is_risk:
+            # Với tác vụ trích xuất rủi ro, vẫn cần nghiêm túc và chính xác
             system = (
-                "You are an expert legal auditor specializing in contract risk analysis. "
-                "Analyze the provided clause and extract potential risks. "
-                "Output your response strictly in valid JSON format."
+                "You are an expert legal auditor. "
+                "Analyze the clause below and extract potential risks into a JSON format. "
+                "Be concise and objective."
             )
-            user = f"Contract Clause:\n{context}"
+            user = f"Clause:\n{context}"
         else:
             system = (
-                "You are a helpful and precise legal assistant. "
-                "Answer the user's question based strictly on the provided context below. "
-                "If the information is not present in the context, clearly state that you do not know."
+                "You are a helpful and smart legal assistant. "
+                "Your goal is to answer the user's question clearly and concisely based on the context provided. "
+                "Avoid unnecessary legal jargon; explain simply if needed. "
+                "If the answer is not in the context, politely say you don't have that information."
             )
             user = f"Context:\n{context}\n\nQuestion:\n{question}"
 
@@ -149,8 +151,8 @@ class LegalSLM:
         with torch.no_grad():
             outputs = self.model.generate(
                 **inputs,
-                max_new_tokens=256,
-                temperature=0.1,
+                max_new_tokens=128,
+                temperature=0.3,
                 do_sample=True,
                 use_cache=True,
                 pad_token_id=self.tokenizer.pad_token_id,
