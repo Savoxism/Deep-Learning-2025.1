@@ -111,17 +111,15 @@ def load_slm_lazy():
             base_model=SLM_BASE_MODEL,
             # adapter_model=SLM_ADAPTER,
             load_in_4bit=True,
-            max_seq_length=2048
+            max_seq_length=2048,
+            max_new_tokens = 128
         )
         slm_model = LegalSLM(config=conf)
     return slm_model
 
 # ---------------------------------------------------------
 # 3. Core Logic (Synchronous)
-# ---------------------------------------------------------
-# Note: These functions remain synchronous (blocking).
-# We will run them in a separate thread using asyncio loop.run_in_executor
-
+# --------------------------------------------------------
 def process_pdf_ingestion(file_path: str, original_filename: str) -> str:
     # 1. Load VLM
     try:
