@@ -20,7 +20,7 @@ from utils.models.vlm import VisionLanguageModel, VLMConfig
 from utils.models.slm import LegalSLM, SLMConfig
 from utils.models.embedder import EmbeddingModel
 from utils.models.reranker import RerankingModel
-from chunking import SimpleChunker
+from src.chunking import SimpleChunker
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -35,18 +35,16 @@ TELEGRAM_TOKEN = "<API_KEY>" # replace with your token
 # Model Configs
 VLM_BASE_MODEL = "Qwen/Qwen2.5-VL-7B-Instruct"
 VLM_ADAPTER = "Ewengc21/qwen_qlora_dl_project"
-SLM_BASE_MODEL = "meta-llama/Llama-3.2-3B-Instruct" # this must change. 
-# SLM_ADAPTER = "Savoxism/Llama3-Adapter-DL-Project"
-EMBEDDING_MODEL_ID = "intfloat/multilingual-e5-base"
+SLM_BASE_MODEL = "meta-llama/Meta-Llama-3-8B-Instruct" # this must change. 
+SLM_ADAPTER = "Savoxism/Llama3-Adapter-DL-Project"
+EMBEDDING_MODEL_ID = "Savoxism/bge-large-en-v1.5-finetuned"
 RERANKER_MODEL_ID = "BAAI/bge-reranker-base"
 
 # Vector Database
 DB_URI = "vector_db/milvus_demo.db"
 COLLECTION_NAME = "legal_rag_collection"
 
-# ---------------------------------------------------------
 # 2. Global State & Lazy Loading
-# ---------------------------------------------------------
 print(">>> Initializing Core Components...")
 device = "cuda" if torch.cuda.is_available() else "cpu"
 

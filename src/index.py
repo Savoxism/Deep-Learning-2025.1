@@ -8,7 +8,7 @@ from tqdm import tqdm
 
 from pymilvus import MilvusClient
 from utils.models.embedder import EmbeddingModel
-from chunking import SimpleChunker
+from src.chunking import SimpleChunker
 
 from src.helper import setup_logger
 
